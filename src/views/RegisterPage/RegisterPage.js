@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
+import {makeStyles} from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
@@ -18,16 +18,19 @@ import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardFooter from "components/Card/CardFooter.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
+import SnackbarContent from "components/Snackbar/SnackbarContent.js";
+
 
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
 import image from "assets/img/bg7.jpg";
+import Check from "@material-ui/core/SvgIcon/SvgIcon";
 
 const useStyles = makeStyles(styles);
 
 export default function RegisterPage(props) {
 
-    function registerUser(){
+    function registerUser() {
         console.log(name);
         console.log(email);
         console.log(password);
@@ -35,18 +38,9 @@ export default function RegisterPage(props) {
         // Simple POST request with a JSON body using fetch
         const requestOptions = {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ username: name, email: email, password: password })
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({username: name, email: email, password: password})
         };
-
-        function handleResponse(data) {
-            if(data.token) {
-                props.history.push({
-                    pathname: '/login-page',
-                    state: { message: "Register completed!"}
-                })
-            }
-        }
 
         fetch('http://localhost:4000/user/signup', requestOptions)
             .then(response => response.json())
@@ -54,16 +48,38 @@ export default function RegisterPage(props) {
 
     }
 
-    const [cardAnimaton, setCardAnimation] = useState("cardHidden");
-    const [name, setName] = useState({name:""});
-    const [email, setEmail] = useState({email:""});
-    const [password, setPassword] = useState({password:""});
 
-    setTimeout(function() {
+    function handleResponse(data) {
+        if (data.token) {
+            props.history.push({
+                pathname: '/login-page',
+                state: {message: "Register completed!"}
+            })
+        }
+
+        if (data.errors) {
+            const newMessageObj = {errMsg: data.errors[0].msg};
+            setErrMsg(newMessageObj);
+        }
+
+        if (data.msg) {
+            const newMessageObj = {errMsg: data.msg};
+            setErrMsg(newMessageObj);
+        }
+
+    }
+
+    const [cardAnimaton, setCardAnimation] = useState("cardHidden");
+    const [name, setName] = useState({name: ""});
+    const [email, setEmail] = useState({email: ""});
+    const [password, setPassword] = useState({password: ""});
+    const [errMsg, setErrMsg] = useState({errMsg: ""});
+
+    setTimeout(function () {
         setCardAnimation("");
     }, 700);
     const classes = useStyles();
-    const { ...rest } = props;
+    const {...rest} = props;
 
     return (
         <div>
@@ -71,7 +87,7 @@ export default function RegisterPage(props) {
                 absolute
                 color="transparent"
                 brand="Maynard Pet Shelter"
-                rightLinks={<HeaderLinks />}
+                rightLinks={<HeaderLinks/>}
                 {...rest}
             />
             <div
@@ -90,6 +106,11 @@ export default function RegisterPage(props) {
                                     <CardHeader color="primary" className={classes.cardHeader}>
                                         <h4>Register</h4>
                                         <h6>It takes just a few seconds.</h6>
+                                        {errMsg.errMsg !== "" &&
+                                        <span style={{color: "red", backgroundColor: "white"}}>
+                                            {errMsg.errMsg} !
+                                        </span>
+                                        }
                                     </CardHeader>
                                     <CardBody>
                                         <CustomInput
@@ -102,10 +123,10 @@ export default function RegisterPage(props) {
                                                 type: "text",
                                                 endAdornment: (
                                                     <InputAdornment position="end">
-                                                        <People className={classes.inputIconsColor} />
+                                                        <People className={classes.inputIconsColor}/>
                                                     </InputAdornment>
                                                 ),
-                                                onChange: ( e => setName(e.target.value) )
+                                                onChange: (e => setName(e.target.value))
                                             }}
                                         />
                                         <CustomInput
@@ -118,10 +139,10 @@ export default function RegisterPage(props) {
                                                 type: "email",
                                                 endAdornment: (
                                                     <InputAdornment position="end">
-                                                        <Email className={classes.inputIconsColor} />
+                                                        <Email className={classes.inputIconsColor}/>
                                                     </InputAdornment>
                                                 ),
-                                                onChange: ( e => setEmail(e.target.value) )
+                                                onChange: (e => setEmail(e.target.value))
                                             }}
 
                                         />
@@ -140,7 +161,7 @@ export default function RegisterPage(props) {
                                                         </Icon>
                                                     </InputAdornment>
                                                 ),
-                                                onChange: ( e => setPassword(e.target.value) ),
+                                                onChange: (e => setPassword(e.target.value)),
                                                 autoComplete: "off"
                                             }}
 
@@ -159,7 +180,7 @@ export default function RegisterPage(props) {
                         </GridItem>
                     </GridContainer>
                 </div>
-                <Footer whiteFont />
+                <Footer whiteFont/>
             </div>
         </div>
     );

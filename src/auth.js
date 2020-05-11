@@ -1,21 +1,15 @@
-class Auth {
-    constructor() {
-        this.authenticated = false;
+export default class Auth {
+
+    static login(cb) {
+        localStorage.setItem("jwt-token", cb);
     }
 
-    login(cb) {
-        this.authenticated = true;
-        console.log(cb)
+    static logout() {
+        localStorage.clear();
     }
 
-    logout(cb) {
-        this.authenticated = false;
-
-    }
-
-    isAuthenticated() {
-        return this.authenticated;
+    static isAuthenticated() {
+        return localStorage.getItem("jwt-token");
     }
 }
 
-export default new Auth();
