@@ -16,6 +16,14 @@ const UserSchema = mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now()
+    },
+    animals: {
+        type: Array,
+        required: false
+    },
+    photo: {
+        type: Array,
+        required: false
     }
 });
 

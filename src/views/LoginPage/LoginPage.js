@@ -43,6 +43,7 @@ export default function LoginPage(props) {
 
         // Simple POST request with a JSON body using fetch
         const requestOptions = {
+            crossDomain: true,
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({email: email, password: password})

@@ -35,7 +35,9 @@ router.post(
         const {
             username,
             email,
-            password
+            password,
+            animals,
+            photo
         } = req.body;
         try {
             let user = await User.findOne({
@@ -50,7 +52,9 @@ router.post(
             user = new User({
                 username,
                 email,
-                password
+                password,
+                animals,
+                photo
             });
 
             const salt = await bcrypt.genSalt(10);
@@ -66,9 +70,7 @@ router.post(
 
             jwt.sign(
                 payload,
-                "randomString", {
-                    expiresIn: 10000
-                },
+                "randomString",
                 (err, token) => {
                     if (err) throw err;
                     res.status(200).json({
@@ -125,9 +127,6 @@ router.post(
             jwt.sign(
                 payload,
                 "secret",
-                {
-                    expiresIn: 3600
-                },
                 (err, token) => {
                     if (err) throw err;
                     res.status(200).json({
