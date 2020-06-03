@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -7,7 +7,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import Button from "@material-ui/core/Button";
+import Button from "../ForAdoptionTable/ForAdoptionTable";
 
 const useStyles = makeStyles({
     table: {
@@ -19,7 +19,6 @@ export default function SimpleTable() {
     const classes = useStyles();
 
     const [pets, setPets] = useState([]);
-
 
     useEffect(() => {
         const getMemberIdOptions = {
@@ -54,7 +53,9 @@ export default function SimpleTable() {
 
     return (
         <TableContainer component={Paper}>
-            <h3> Pets you posted for adoption </h3>
+            <h3>
+                Pets you adopted
+            </h3>
             <Table className={classes.table} aria-label="simple table">
                 <TableHead>
                     <TableRow>
@@ -64,12 +65,11 @@ export default function SimpleTable() {
                         <TableCell align="center">Age</TableCell>
                         <TableCell align="center">Tag</TableCell>
                         <TableCell align="center">Status</TableCell>
-                        <TableCell align="center">Actions</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     {pets.map((pet) => (
-                        pet.status === "For adoption" &&
+                        pet.status === "Adopted" &&
                         <TableRow key={pet.tag}>
                             <TableCell component="th" scope="row">
                                 {pet.photo}
@@ -79,14 +79,6 @@ export default function SimpleTable() {
                             <TableCell align="center">{pet.age}</TableCell>
                             <TableCell align="center">{pet.tag}</TableCell>
                             <TableCell align="center">{pet.status}</TableCell>
-                            <TableCell align="center">
-                                <Button>
-                                    Update
-                                </Button>
-                                <Button>
-                                    Delete
-                                </Button>
-                            </TableCell>
 
                         </TableRow>
                     ))}

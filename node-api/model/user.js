@@ -17,12 +17,20 @@ const UserSchema = mongoose.Schema({
         type: Date,
         default: Date.now()
     },
-    animals: {
+    photo: {
         type: Array,
         required: false
     },
-    photo: {
-        type: Array,
+    phone: {
+        type: String,
+        required: false
+    },
+    city: {
+        type: String,
+        required: false
+    },
+    desc: {
+        type: String,
         required: false
     }
 });

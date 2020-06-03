@@ -18,6 +18,7 @@ import NavPills from "components/NavPills/NavPills.js";
 import Parallax from "components/Parallax/Parallax.js";
 
 import ForAdoptionTable from "../../components/ForAdoptionTable/ForAdoptionTable.js"
+import MyPetsTable from "../../components/MyPetsTable/MyPetsTable"
 
 import studio1 from "assets/img/examples/studio-1.jpg";
 import studio2 from "assets/img/examples/studio-2.jpg";
@@ -47,6 +48,9 @@ export default function ProfilePage(props) {
     const [name, setName] = useState('dummyName');
     const [email, setEmail] = useState('dummyEmail');
     const [photo, setPhoto] = useState('');
+    const [desc, setDesc] = useState('');
+    const [phone, setPhone] = useState('');
+    const [city, setCity] = useState('');
 
     useEffect(() => {
         const requestOptions = {
@@ -100,6 +104,9 @@ export default function ProfilePage(props) {
                                             <h3 className={classes.title}>{name}</h3>
                                             <h6>PET LOVER</h6>
                                             <h6>{email}</h6>
+                                            <h6>{city}</h6>
+                                            <h6>{desc}</h6>
+                                            <h6>{phone}</h6>
                                         </div>
                                     }
                                     {
@@ -108,6 +115,9 @@ export default function ProfilePage(props) {
                                             <h3 className={classes.title}>{name}</h3>
                                             <h6>PET LOVER</h6>
                                             <h6>{email}</h6>
+                                            <h6>{city}</h6>
+                                            <h6>{desc}</h6>
+                                            <h6>{phone}</h6>
                                         </div>
                                     }
                                 </div>
@@ -122,19 +132,21 @@ export default function ProfilePage(props) {
                                     color="primary"
                                     tabs={[
                                         {
-                                            tabButton: "My Pets",
-                                            tabIcon: Pets,
-                                            tabContent: (
-                                                <div>
-
-                                                </div>
-                                            )
-                                        },
-                                        {
                                             tabButton: "For Adoption",
                                             tabIcon: Home,
                                             tabContent: (
-                                                <ForAdoptionTable/>
+                                                <GridContainer justify="center">
+                                                    <ForAdoptionTable/>
+                                                </GridContainer>
+                                            )
+                                        },
+                                        {
+                                            tabButton: "My Pets",
+                                            tabIcon: Pets,
+                                            tabContent: (
+                                                <GridContainer justify="center">
+                                                    <MyPetsTable/>
+                                                </GridContainer>
                                             )
                                         },
                                         {

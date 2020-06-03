@@ -4,8 +4,6 @@ import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
-// @material-ui/icons
-
 // core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
@@ -18,9 +16,7 @@ import Parallax from "components/Parallax/Parallax.js";
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
-import ProductSection from "./Sections/ProductSection.js";
-import TeamSection from "./Sections/TeamSection.js";
-import WorkSection from "./Sections/WorkSection.js";
+import ProductSection from "./Sections/DescriptionSection.js";
 
 const dashboardRoutes = [];
 
@@ -55,14 +51,17 @@ export default function LandingPage(props) {
                 impression.
               </h4>
               <br />
-              <Button
-                color="danger"
-                size="lg"
-                href="/register-page"
-                rel="noopener noreferrer"
-              >
-                Register Now !
-              </Button>
+                {
+                    !localStorage.getItem("jwt-token") &&
+                    <Button
+                    color="danger"
+                    size="lg"
+                    href="/register-page"
+                    rel="noopener noreferrer"
+                    >
+                    Register Now !
+                    </Button>
+                }
             </GridItem>
           </GridContainer>
         </div>
