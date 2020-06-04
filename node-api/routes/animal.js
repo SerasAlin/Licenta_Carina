@@ -40,7 +40,8 @@ router.post(
             age,
             photo,
             tag,
-            master_id
+            master_id,
+            story
         } = req.body;
         try {
             let animal = await Animal.findOne({
@@ -58,7 +59,8 @@ router.post(
                 age,
                 photo,
                 tag,
-                master_id
+                master_id,
+                story
             });
             await animal.save();
             res.status(200).json({
@@ -78,6 +80,15 @@ router.get("/my-animals", async (req, res) => {
         res.json(animal);
     } catch (e) {
         res.send({ message: "Error in Fetching animals" });
+    }
+});
+
+router.get("/pet-page", async (req, res) => {
+    try {
+        const animal = await Animal.findOne({ tag: req.header("tag") });
+        res.json(animal);
+    } catch (e) {
+        res.send({ message: "Error in Fetching pet" });
     }
 });
 

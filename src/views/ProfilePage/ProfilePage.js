@@ -21,15 +21,10 @@ import ForAdoptionTable from "../../components/ForAdoptionTable/ForAdoptionTable
 import MyPetsTable from "../../components/MyPetsTable/MyPetsTable"
 
 import studio1 from "assets/img/examples/studio-1.jpg";
-import studio2 from "assets/img/examples/studio-2.jpg";
 import studio3 from "assets/img/examples/studio-3.jpg";
-import studio4 from "assets/img/examples/studio-4.jpg";
-import studio5 from "assets/img/examples/studio-5.jpg";
 import work1 from "assets/img/examples/olu-eletu.jpg";
 import work2 from "assets/img/examples/clem-onojeghuo.jpg";
-import work3 from "assets/img/examples/cynthia-del-rio.jpg";
 import work4 from "assets/img/examples/mariya-georgieva.jpg";
-import work5 from "assets/img/examples/clem-onojegaw.jpg";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
 
@@ -102,10 +97,9 @@ export default function ProfilePage(props) {
                                         photo &&
                                         <div className={classes.name}>
                                             <h3 className={classes.title}>{name}</h3>
-                                            <h6>PET LOVER</h6>
+                                            <h6>{desc}</h6>
                                             <h6>{email}</h6>
                                             <h6>{city}</h6>
-                                            <h6>{desc}</h6>
                                             <h6>{phone}</h6>
                                         </div>
                                     }
@@ -113,10 +107,9 @@ export default function ProfilePage(props) {
                                         !photo &&
                                         <div className={classes.name} style={{marginTop : "10px"}}>
                                             <h3 className={classes.title}>{name}</h3>
-                                            <h6>PET LOVER</h6>
+                                            <h6>{desc}</h6>
                                             <h6>{email}</h6>
                                             <h6>{city}</h6>
-                                            <h6>{desc}</h6>
                                             <h6>{phone}</h6>
                                         </div>
                                     }

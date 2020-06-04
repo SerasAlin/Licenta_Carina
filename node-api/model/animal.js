@@ -28,6 +28,10 @@ const AnimalSchema = mongoose.Schema({
     master_id: {
         type: String,
         required: true
+    },
+    story: {
+        type: String,
+        required: false
     }
 });
 
