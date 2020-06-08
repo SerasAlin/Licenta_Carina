@@ -50,11 +50,6 @@ export default function HeaderLinks(props) {
   }
   return (
     <List className={classes.list}>
-      <ListItem className={classes.listItem}>
-        <Button href="/" color="transparent" className={classes.navLink}>
-          Home
-        </Button>
-      </ListItem>
       {auth.isAuthenticated() && (
         <ListItem className={classes.listItem}>
           <Button
@@ -66,6 +61,12 @@ export default function HeaderLinks(props) {
           </Button>
         </ListItem>
       )}
+      <ListItem className={classes.listItem}>
+        <Button href="/" color="transparent" className={classes.navLink}>
+          Home
+        </Button>
+      </ListItem>
+
       {!auth.isAuthenticated() && (
         <ListItem className={classes.listItem}>
           <Button

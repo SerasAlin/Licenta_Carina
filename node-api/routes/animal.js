@@ -101,7 +101,7 @@ router.get("/all-animals", async (req, res) => {
     }
 });
 
-router.patch("/update-animal", async (req, res) => {
+router.put("/update-animal", async (req, res) => {
     try {
         let myQuery = req.header.tag;
         let newValues = { $set: req.body};

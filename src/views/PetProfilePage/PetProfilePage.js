@@ -69,21 +69,24 @@ export default function ProfilePage(props) {
             }
         };
 
-        const getUserRequestOptions = {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'token': localStorage.getItem("jwt-token")
-            }
-        };
-
         fetch('http://localhost:4000/animal/pet-page', getPetRequestOptions)
             .then(response => response.json())
-            .then(data => setPetData(data));
+            .then(data => {
+                setPetData(data);
 
-        fetch('http://localhost:4000/user/me', getUserRequestOptions)
-            .then(response => response.json())
-            .then(data => setUserData(data));
+                const getMasterRequestOptions = {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'master_id': data.master_id
+                    }
+                };
+
+                fetch('http://localhost:4000/user/user-animal', getMasterRequestOptions)
+                    .then(response => response.json())
+                    .then(data => setUserData(data));
+            });
+
     }, []);
 
     function setPetData(data) {
@@ -155,10 +158,14 @@ export default function ProfilePage(props) {
                                 </div>
                             </GridItem>
                             <GridItem xs={6} sm={3} md={3}>
+                                <br/>
+
                                 <div>
-                                    <h3>Given to adoption by</h3>
+                                    <h4>Given to adoption by</h4>
                                 </div>
-                                <Button style={{marginLeft: "70px"}} variant="contained" size="large" color="secondary" className={classes.margin}>
+                                <br/>
+                                <br/>
+                                <Button style={{marginLeft: "60px"}} variant="contained" size="large" color="secondary" className={classes.margin}>
                                     Adopt!
                                 </Button>
                             </GridItem>
