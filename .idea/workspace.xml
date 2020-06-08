@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92d008db-f2b3-4d66-9875-be852b211b5a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/pets.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/PetProfilePage/PetProfilePage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/EditProfileTable/EditProfileTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node-api/model/animal.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-api/model/animal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node-api/routes/animal.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-api/routes/animal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/AdoptPage/AdoptPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AdoptPage/AdoptPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/ProfilePage/ProfilePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ProfilePage/ProfilePage.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,15 +18,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/AdoptPage/AdoptPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="83" column="19" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
+            <state relative-caret-position="391">
+              <caret line="89" column="32" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="32" />
               <folding>
                 <element signature="e#236#285#0" expanded="true" />
-                <element signature="e#1090#1171#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/EditProfileTable/EditProfileTable.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -39,12 +42,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/ProfilePage/ProfilePage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="71" selection-start-line="71" selection-end-line="81" selection-end-column="14" />
+            <state relative-caret-position="378">
+              <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
               <folding>
-                <element signature="e#140#192#0" expanded="true" />
-                <element signature="e#258#301#0" expanded="true" />
-                <element signature="e#420#469#0" expanded="true" />
+                <element signature="e#140#194#0" expanded="true" />
+                <element signature="e#262#305#0" expanded="true" />
+                <element signature="e#425#474#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,8 +114,9 @@
         <option value="$PROJECT_DIR$/src/views/PetProfilePage/PetProfilePage.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/views/AdoptPage/Sections/AdoptSection.js" />
-        <option value="$PROJECT_DIR$/src/views/ProfilePage/ProfilePage.js" />
         <option value="$PROJECT_DIR$/src/views/AdoptPage/AdoptPage.js" />
+        <option value="$PROJECT_DIR$/src/views/ProfilePage/ProfilePage.js" />
+        <option value="$PROJECT_DIR$/src/components/EditProfileTable/EditProfileTable.js" />
       </list>
     </option>
   </component>
@@ -167,28 +171,13 @@
               <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="AdoptPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="LandingPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="PetProfilePage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
@@ -252,12 +241,13 @@
       <workItem from="1591017905036" duration="13224000" />
       <workItem from="1591039528743" duration="808000" />
       <workItem from="1591191508437" duration="14541000" />
-      <workItem from="1591264234839" duration="13698000" />
+      <workItem from="1591264234839" duration="14352000" />
+      <workItem from="1591604764865" duration="1046000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98332000" />
+    <option name="totallyTimeSpent" value="100032000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -266,10 +256,10 @@
       <window_info id="Gulp" order="0" side_tool="true" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.14925373" />
+      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.15085287" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.22751896" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.33261105" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.082340196" />
       <window_info anchor="bottom" id="Database Changes" order="4" />
@@ -292,9 +282,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/assets/img/profile.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/img/faces/camp.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -551,13 +538,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/AdoptPage/Sections/AdoptSection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-595">
-          <caret line="1" selection-start-line="1" selection-end-line="9" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/AdoptPage/Sections/AdoptSection.js" />
     <entry file="file://$PROJECT_DIR$/src/views/PetProfilePage/PetProfilePage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="901">
@@ -570,26 +551,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/ProfilePage/ProfilePage.js">
+    <entry file="file://$PROJECT_DIR$/src/views/AdoptPage/AdoptPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="71" selection-start-line="71" selection-end-line="81" selection-end-column="14" />
+        <state relative-caret-position="391">
+          <caret line="89" column="32" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="32" />
           <folding>
-            <element signature="e#140#192#0" expanded="true" />
-            <element signature="e#258#301#0" expanded="true" />
-            <element signature="e#420#469#0" expanded="true" />
+            <element signature="e#236#285#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/AdoptPage/AdoptPage.js">
+    <entry file="file://$PROJECT_DIR$/src/views/ProfilePage/ProfilePage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="83" column="19" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
+        <state relative-caret-position="378">
+          <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
           <folding>
-            <element signature="e#236#285#0" expanded="true" />
-            <element signature="e#1090#1171#0" expanded="true" />
+            <element signature="e#140#194#0" expanded="true" />
+            <element signature="e#262#305#0" expanded="true" />
+            <element signature="e#425#474#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/EditProfileTable/EditProfileTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
