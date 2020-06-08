@@ -2,8 +2,8 @@ import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-import { useState, useEffect } from "react";
+import {makeStyles} from "@material-ui/core/styles";
+import {useState, useEffect} from "react";
 // @material-ui/icons
 import Home from "@material-ui/icons/Home";
 import AccountBox from "@material-ui/icons/AccountBox";
@@ -38,7 +38,7 @@ const useStyles = makeStyles(styles);
 
 export default function ProfilePage(props) {
     const classes = useStyles();
-    const { ...rest } = props;
+    const {...rest} = props;
     const imageClasses = classNames(
         classes.imgRaised,
         classes.imgRoundedCircle,
@@ -67,10 +67,20 @@ export default function ProfilePage(props) {
             .then((data) => handleResponse(data));
     }, []);
 
+    var imageStyle = {
+        width: "100px",
+        height: "100px",
+    };
+
     function handleResponse(data) {
         setName(data.username);
         setEmail(data.email);
-        setPhoto(data.photo[0]);
+        setPhoto(data.photo);
+        if (photo === "") {
+            setPhoto("faces/dummyAvatar.png")
+        }
+
+        console.log(data.photo)
     }
 
     return (
@@ -78,7 +88,7 @@ export default function ProfilePage(props) {
             <Header
                 color="transparent"
                 brand="Maynard Pet Shelter"
-                rightLinks={<HeaderLinks />}
+                rightLinks={<HeaderLinks/>}
                 fixed
                 changeColorOnScroll={{
                     height: 200,
@@ -86,42 +96,25 @@ export default function ProfilePage(props) {
                 }}
                 {...rest}
             />
-            <Parallax small filter image={require("assets/img/profile-bg.jpg")} />
+            <Parallax small filter image={require("assets/img/profile-bg.jpg")}/>
             <div className={classNames(classes.main, classes.mainRaised)}>
                 <div>
                     <div className={classes.container}>
                         <GridContainer justify="center">
                             <GridItem xs={12} sm={12} md={6}>
                                 <div className={classes.profile}>
-                                    {photo && (
-                                        <div>
-                                            <img
-                                                src={`../img/${photo}`}
-                                                alt="..."
-                                                className={imageClasses}
-                                            />
-                                        </div>
-                                    )}
-                                    {photo && (
-                                        <div className={classes.name}>
-                                            <h3 className={classes.title}>{name}</h3>
-                                            <h6>PET LOVER</h6>
-                                            <h6>{email}</h6>
-                                            <h6>{city}</h6>
-                                            <h6>{desc}</h6>
-                                            <h6>{phone}</h6>
-                                        </div>
-                                    )}
-                                    {!photo && (
-                                        <div className={classes.name} style={{ marginTop: "10px" }}>
-                                            <h3 className={classes.title}>{name}</h3>
-                                            <h6>PET LOVER</h6>
-                                            <h6>{email}</h6>
-                                            <h6>{city}</h6>
-                                            <h6>{desc}</h6>
-                                            <h6>{phone}</h6>
-                                        </div>
-                                    )}
+                                    <div>
+                                        <img style={imageStyle} src={`../img/${photo}`} alt="..."
+                                             className={imageClasses}/>
+                                    </div>
+                                    <div className={classes.name}>
+                                        <h3 className={classes.title}>{name}</h3>
+                                        <h6>PET LOVER</h6>
+                                        <h6>{email}</h6>
+                                        <h6>{city}</h6>
+                                        <h6>{desc}</h6>
+                                        <h6>{phone}</h6>
+                                    </div>
                                 </div>
                             </GridItem>
                         </GridContainer>
@@ -133,11 +126,20 @@ export default function ProfilePage(props) {
                                     color="primary"
                                     tabs={[
                                         {
+                                            tabButton: "Profile",
+                                            tabIcon: AccountBox,
+                                            tabContent: (
+                                                <GridContainer justify="center">
+                                                    <EditProfileTable/>
+                                                </GridContainer>
+                                            ),
+                                        },
+                                        {
                                             tabButton: "For Adoption",
                                             tabIcon: Home,
                                             tabContent: (
                                                 <GridContainer justify="center">
-                                                    <ForAdoptionTable />
+                                                    <ForAdoptionTable/>
                                                 </GridContainer>
                                             ),
                                         },
@@ -146,19 +148,10 @@ export default function ProfilePage(props) {
                                             tabIcon: Pets,
                                             tabContent: (
                                                 <GridContainer justify="center">
-                                                    <MyPetsTable />
+                                                    <MyPetsTable/>
                                                 </GridContainer>
                                             ),
-                                        },
-                                        {
-                                            tabButton: "Profile",
-                                            tabIcon: AccountBox,
-                                            tabContent: (
-                                                <GridContainer justify="center">
-                                                    <EditProfileTable />
-                                                </GridContainer>
-                                            ),
-                                        },
+                                        }
                                     ]}
                                 />
                             </GridItem>
@@ -166,7 +159,7 @@ export default function ProfilePage(props) {
                     </div>
                 </div>
             </div>
-            <Footer />
+            <Footer/>
         </div>
     );
 }

@@ -8,6 +8,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Button from "@material-ui/core/Button";
+import classNames from "classnames";
 
 const useStyles = makeStyles({
     table: {
@@ -20,6 +21,16 @@ export default function SimpleTable() {
 
     const [pets, setPets] = useState([]);
 
+    const imageClasses = classNames(
+        classes.imgRaised,
+        classes.imgRoundedCircle,
+        classes.imgFluid
+    );
+
+    var imageStyle = {
+        width: "100px",
+        height: "100px",
+    };
 
     useEffect(() => {
         const getMemberIdOptions = {
@@ -72,7 +83,10 @@ export default function SimpleTable() {
                         pet.status === "For adoption" &&
                         <TableRow key={pet.tag}>
                             <TableCell component="th" scope="row">
-                                {pet.photo}
+                                <div>
+                                    <img style={imageStyle} src={`../img/${pet.photo}`} alt="..."
+                                         className={imageClasses}/>
+                                </div>
                             </TableCell>
                             <TableCell align="center">{pet.name}</TableCell>
                             <TableCell align="center">{pet.type}</TableCell>

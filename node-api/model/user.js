@@ -18,7 +18,7 @@ const UserSchema = mongoose.Schema({
         default: Date.now()
     },
     photo: {
-        type: Array,
+        type: String,
         required: false
     },
     phone: {

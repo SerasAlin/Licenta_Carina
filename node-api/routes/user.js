@@ -139,6 +139,45 @@ router.post(
     }
 );
 
+router.get("/user-animal", async (req, res) => {
+    try {
+        const user = await User.findById(req.header("master_id"));
+        res.json(user);
+    } catch (e) {
+        res.send({ message: "Error in Fetching pet" });
+    }
+});
+
+router.get("/all-users", async (req, res) => {
+    try {
+        const animal = await User.find();
+        res.json(animal);
+    } catch (e) {
+        res.send({ message: "Error in Fetching users" });
+    }
+});
+
+router.put("/update-user", async (req, res) => {
+    try {
+        let myQuery = req.header.id;
+        let newValues = { $set: req.body};
+        const user = await User.updateOne(myQuery, newValues);
+        res.json(user);
+    } catch (e) {
+        res.send({ message: "Error in Update user" });
+    }
+});
+
+router.delete("/delete-user", async (req, res) => {
+    try {
+        let myQuery = req.header.id;
+        const user = await User.deleteOne(myQuery);
+        res.json(user);
+    } catch (e) {
+        res.send({ message: "Error in Delete user" });
+    }
+});
+
 router.get("/me", auth, async (req, res) => {
     try {
 
