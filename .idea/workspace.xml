@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92d008db-f2b3-4d66-9875-be852b211b5a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/node-api/adminPanelComponents/Dashboard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node-api/routes/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node-api/model/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-api/model/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node-api/routes/animal.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-api/routes/animal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node-api/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-api/routes/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EditProfileTable/EditProfileTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditProfileTable/EditProfileTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ForAdoptionTable/ForAdoptionTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ForAdoptionTable/ForAdoptionTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MyPetsTable/MyPetsTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyPetsTable/MyPetsTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/PetProfilePage/PetProfilePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PetProfilePage/PetProfilePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/ProfilePage/ProfilePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ProfilePage/ProfilePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node-api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node-api/model/animal.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-api/model/animal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node-api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node-api/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,104 +19,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/EditProfileTable/EditProfileTable.js">
+        <entry file="file://$PROJECT_DIR$/node-api/routes/admin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="83" column="23" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
+            <state relative-caret-position="170">
+              <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node-api/adminPanelComponents/Dashboard.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
               <folding>
-                <element signature="e#0#49#0" expanded="true" />
+                <element signature="e#0#25#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/RegisterPage/RegisterPage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="108" column="47" selection-start-line="108" selection-start-column="41" selection-end-line="108" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/LoginPage/LoginPage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-end-line="21" />
-              <folding>
-                <element signature="e#71#123#0" expanded="true" />
-                <element signature="e#252#297#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#301#360#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/ProfilePage/ProfilePage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-120">
-              <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node-api/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="16" column="67" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node-api/model/user.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node-api/model/animal.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="31" column="9" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node-api/routes/user.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="157" column="3" lean-forward="true" selection-start-line="157" selection-start-column="3" selection-end-line="157" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node-api/routes/animal.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="104" column="9" lean-forward="true" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -175,20 +92,23 @@
         <option value="$PROJECT_DIR$/src/views/LandingPage/Sections/ProductSection.js" />
         <option value="$PROJECT_DIR$/src/views/LandingPage/Sections/DescriptionSection.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/node-api/model/animal.js" />
         <option value="$PROJECT_DIR$/src/views/AdoptPage/Sections/AdoptSection.js" />
         <option value="$PROJECT_DIR$/src/views/AdoptPage/AdoptPage.js" />
         <option value="$PROJECT_DIR$/src/views/PetProfilePage/PetProfilePage.js" />
         <option value="$PROJECT_DIR$/node-api/model/user.js" />
         <option value="$PROJECT_DIR$/src/components/ForAdoptionTable/ForAdoptionTable.js" />
         <option value="$PROJECT_DIR$/src/components/MyPetsTable/MyPetsTable.js" />
-        <option value="$PROJECT_DIR$/node-api/index.js" />
         <option value="$PROJECT_DIR$/node-api/routes/animal.js" />
         <option value="$PROJECT_DIR$/node-api/routes/user.js" />
         <option value="$PROJECT_DIR$/src/protected.route.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/views/ProfilePage/ProfilePage.js" />
         <option value="$PROJECT_DIR$/src/components/EditProfileTable/EditProfileTable.js" />
+        <option value="$PROJECT_DIR$/node-api/index.js" />
+        <option value="$PROJECT_DIR$/node-api/model/animal.js" />
+        <option value="$PROJECT_DIR$/node-api/AdminPanelComponents/Dashboard.jsx" />
+        <option value="$PROJECT_DIR$/node-api/adminPanelComponents/Dashboard.jsx" />
+        <option value="$PROJECT_DIR$/node-api/routes/admin.js" />
       </list>
     </option>
   </component>
@@ -215,41 +135,13 @@
             <path>
               <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="node-api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="AdoptPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="LoginPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="ProfilePage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="RegisterPage" type="462c0819:PsiDirectoryNode" />
+              <item name="node-api" type="462c0819:PsiDirectoryNode" />
+              <item name="adminPanelComponents" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -307,12 +199,13 @@
       <workItem from="1591039528743" duration="808000" />
       <workItem from="1591191508437" duration="14541000" />
       <workItem from="1591264234839" duration="14352000" />
-      <workItem from="1591604764865" duration="15354000" />
+      <workItem from="1591604764865" duration="16350000" />
+      <workItem from="1591790285853" duration="3233000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114340000" />
+    <option name="totallyTimeSpent" value="118569000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -321,10 +214,10 @@
       <window_info id="Gulp" order="0" side_tool="true" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.16311301" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.16471216" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.20151679" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.3575298" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.082340196" />
       <window_info anchor="bottom" id="Database Changes" order="4" />
@@ -347,22 +240,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/assets/css/crudTable.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="564" column="1" selection-start-line="564" selection-start-column="1" selection-end-line="564" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Card/Card.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-127" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/material-kit-react.css.map">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="sourcemapFileViewerProvider" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.promise.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
@@ -555,34 +432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node-api/model/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node-api/model/animal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node-api/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="16" column="67" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node-api/routes/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="157" column="3" lean-forward="true" selection-start-line="157" selection-start-column="3" selection-end-line="157" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/protected.route.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -590,24 +439,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node-api/routes/animal.js">
+    <entry file="file://$PROJECT_DIR$/src/components/EditProfileTable/EditProfileTable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="104" column="9" lean-forward="true" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
+        <state relative-caret-position="491">
+          <caret line="102" column="21" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/RegisterPage/RegisterPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="1496">
           <caret line="108" column="47" selection-start-line="108" selection-start-column="41" selection-end-line="108" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/LoginPage/LoginPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="17" selection-start-line="20" selection-end-line="21" />
+          <folding>
+            <element signature="e#71#123#0" expanded="true" />
+            <element signature="e#252#297#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+        <state relative-caret-position="238">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="e#301#360#0" expanded="true" />
@@ -617,29 +480,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/ProfilePage/ProfilePage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+        <state relative-caret-position="969">
+          <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/LoginPage/LoginPage.js">
+    <entry file="file://$PROJECT_DIR$/node-api/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-end-line="21" />
+        <state relative-caret-position="68">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-api/routes/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="143" column="31" selection-start-line="143" selection-start-column="27" selection-end-line="143" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-api/routes/animal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="104" column="9" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-api/model/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="32" column="21" lean-forward="true" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-api/model/animal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-api/.adminbro/.entry.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-api/adminPanelComponents/Dashboard.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
           <folding>
-            <element signature="e#71#123#0" expanded="true" />
-            <element signature="e#252#297#0" expanded="true" />
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/EditProfileTable/EditProfileTable.js">
+    <entry file="file://$PROJECT_DIR$/node-api/routes/admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="83" column="23" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
         </state>
       </provider>
     </entry>

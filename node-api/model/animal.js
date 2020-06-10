@@ -27,7 +27,8 @@ const AnimalSchema = mongoose.Schema({
     },
     master_id: {
         type: String,
-        required: true
+        required: true,
+        ref: 'animal'
     },
     story: {
         type: String,
@@ -35,5 +36,5 @@ const AnimalSchema = mongoose.Schema({
     }
 });
 
-// export model user with UserSchema
+// export model animal with AnimalSchema
 module.exports = mongoose.model("animal", AnimalSchema);
