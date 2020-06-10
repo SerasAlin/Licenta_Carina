@@ -21,13 +21,15 @@ router.post(
         const {
             user_id,
             content,
-            photo
+            photo,
+            details
         } = req.body;
         try {
             post = new Post({
                 user_id,
                 content,
-                photo
+                photo,
+                details
             });
             await post.save();
             res.status(200).json({
