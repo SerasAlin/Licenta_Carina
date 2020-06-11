@@ -130,8 +130,16 @@ export default function AdoptPage(props) {
                                         pet.status === "For adoption" &&
                                         <TableRow key={pet.tag}>
                                             <TableCell align="center" component="th" scope="row">
-                                                <img style={imageStyle} src={`../img/${pet.photo}`} alt="..."
-                                                     className={imageClasses}/>
+                                                {
+                                                    pet.photo &&
+                                                    <img style={imageStyle} src={`../img/${pet.photo}`} alt="..."
+                                                         className={imageClasses}/>
+                                                }
+                                                {
+                                                    !pet.photo &&
+                                                    <img style={imageStyle} src={`../img/faces/dummyPetAvatar.png`} alt="..."
+                                                         className={imageClasses}/>
+                                                }
                                             </TableCell>
                                             <TableCell align="center">{pet.name}</TableCell>
                                             <TableCell align="center">{pet.type}</TableCell>
@@ -139,7 +147,7 @@ export default function AdoptPage(props) {
                                             <TableCell align="center">{pet.tag}</TableCell>
                                             <TableCell align="center">{pet.status}</TableCell>
                                             <TableCell align="center">
-                                                <Button onClick={() => openPetProfile(pet.tag)}>
+                                                <Button color="primary" onClick={() => openPetProfile(pet.tag)}>
                                                     View
                                                 </Button>
                                             </TableCell>

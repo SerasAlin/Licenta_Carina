@@ -32,7 +32,7 @@ import work4 from "assets/img/examples/mariya-georgieva.jpg";
 import work5 from "assets/img/examples/clem-onojegaw.jpg";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
-import Button from "@material-ui/core/Button";
+import Button from "components/CustomButtons/Button.js";
 
 const useStyles = makeStyles(styles);
 
@@ -41,7 +41,8 @@ export default function ProfilePage(props) {
     const {...rest} = props;
     const imageClasses = classNames(
         classes.imgRaised,
-        classes.imgFluid,
+        classes.imgRoundedCircle,
+        classes.imgFluid
     );
     const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
 
@@ -97,6 +98,11 @@ export default function ProfilePage(props) {
         setAge(data.age);
         setTag(data.tag);
         setDesc(data.story);
+
+
+        if (data.photo === "") {
+            setPhoto("faces/dummyPetAvatar.png");
+        }
     }
 
     function setUserData(data) {
@@ -107,6 +113,10 @@ export default function ProfilePage(props) {
         setUserDesc(data.desc);
         setUserPhone(data.phone);
         setUserCity(data.city);
+
+        if (data.photo === "") {
+            setUserPhoto("faces/dummyAvatar.png");
+        }
     }
 
     return (
@@ -129,32 +139,20 @@ export default function ProfilePage(props) {
                         <GridContainer justify="center">
                             <GridItem xs={6} sm={3} md={3}>
                                 <div className={classes.profile}>
-                                    {
-                                        photo &&
-                                        <div>
-                                            <img src={`../img/${photo}`} alt="..." className={imageClasses}/>
-                                        </div>
-                                    }
-                                    {
-                                        photo &&
-                                        <div className={classes.name}>
-                                            <h3 className={classes.title}>{name}</h3>
-                                            <h6>{desc}</h6>
-                                            <h6>Type : {type}</h6>
-                                            <h6>Age: {age}</h6>
-                                            <h6>Tag: {tag}</h6>
-                                        </div>
-                                    }
-                                    {
-                                        !photo &&
-                                        <div className={classes.name}>
-                                            <h3 className={classes.title}>{name}</h3>
-                                            <h6>{desc}</h6>
-                                            <h6>Type: {type}</h6>
-                                            <h6>Age: {age}</h6>
-                                            <h6>Tag: {tag}</h6>
-                                        </div>
-                                    }
+                                    <div>
+                                        <img
+                                            src={`../img/${photo}`}
+                                            alt="..."
+                                            className={imageClasses}
+                                        />
+                                    </div>
+                                    <div className={classes.name}>
+                                        <h3 className={classes.title}>{name}</h3>
+                                        <h6>{desc}</h6>
+                                        <h6>Type : {type}</h6>
+                                        <h6>Age: {age}</h6>
+                                        <h6>Tag: {tag}</h6>
+                                    </div>
                                 </div>
                             </GridItem>
                             <GridItem xs={6} sm={3} md={3}>
@@ -165,7 +163,8 @@ export default function ProfilePage(props) {
                                 </div>
                                 <br/>
                                 <br/>
-                                <Button style={{marginLeft: "60px"}} variant="contained" size="large" color="secondary" className={classes.margin}>
+                                <Button style={{marginLeft: "60px"}} variant="contained" size="large" color="primary"
+                                        className={classes.margin}>
                                     Adopt!
                                 </Button>
                             </GridItem>
@@ -189,7 +188,7 @@ export default function ProfilePage(props) {
                                     }
                                     {
                                         !photo &&
-                                        <div className={classes.name} style={{marginTop : "10px"}}>
+                                        <div className={classes.name} style={{marginTop: "10px"}}>
                                             <h3 className={classes.title}>{userName}</h3>
                                             <h6>{userDesc}</h6>
                                             <h6>{userEmail}</h6>

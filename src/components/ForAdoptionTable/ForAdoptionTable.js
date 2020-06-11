@@ -8,7 +8,7 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
-import Button from "@material-ui/core/Button";
+import Button from "../CustomButtons/Button.js";
 import classNames from "classnames";
 import SnackbarContent from "../Snackbar/SnackbarContent";
 import Check from "@material-ui/core/SvgIcon/SvgIcon";
@@ -21,18 +21,20 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SimpleTable() {
+export default function SimpleTable(props) {
   const classes = useStyles();
 
   const [pets, setPets] = useState([]);
 
   const [updated, setUpdated] = useState(false);
 
-  const [tag, setTag] = useState("");
-  const [namePet, setNamePet] = useState("");
+  const [masterId, setMasterId] = useState("");
+  const [story, setStory] = useState("");
+  const [name, setName] = useState("");
   const [type, setType] = useState("");
-  const [photoPet, setPhotoPet] = useState("");
+  const [photo, setPhoto] = useState("");
   const [age, setAge] = useState("");
+  const [tag, setTag] = useState("");
   const [breed, setBreed] = useState("");
   const [sex, setSex] = useState("");
 
@@ -59,13 +61,14 @@ export default function SimpleTable() {
     fetch("http://localhost:4000/user/me", getMemberIdOptions)
       .then((response) => response.json())
       .then((data) => {
-        let memberProfileId = data._id;
-        console.log(memberProfileId);
+        setMasterId(data._id);
+        let master_id = data._id;
+        console.log(master_id);
         const getMyPetsForAdoptionOptions = {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            master_id: memberProfileId,
+            master_id: master_id,
           },
         };
         fetch(
@@ -80,16 +83,55 @@ export default function SimpleTable() {
       });
   }, []);
 
+  function handleSubmit() {
+    const requestOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: name,
+        type: type,
+        status: "For adoption",
+        age: age,
+        photo: photo,
+        tag: tag,
+        master_id: masterId,
+        story: story,
+        breed: breed,
+        sex: sex,
+      }),
+    };
+
+    fetch("http://localhost:4000/animal/register-animal", requestOptions)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          setUpdated(true);
+          setTimeout(() => {
+            setUpdated(false);
+          }, 2000);
+        });
+  }
+
   function SuccessMessage() {
     return (
       <SnackbarContent
-        message={<span>Update successful!</span>}
+        message={<span>Pet successfully registered for adoption!</span>}
         close
         color="success"
         icon={Check}
       />
     );
   }
+
+  function openPetProfile(tag) {
+    // props.history.push({
+    //   pathname: '/pet-profile-page',
+    //   state: {tag: tag}
+    // })
+  }
+
   return (
     <div>
       <TableContainer component={Paper}>
@@ -100,6 +142,8 @@ export default function SimpleTable() {
               <TableCell align="center">Photo</TableCell>
               <TableCell align="center">Name</TableCell>
               <TableCell align="center">Type</TableCell>
+              <TableCell align="center">Breed</TableCell>
+              <TableCell align="center">Sex</TableCell>
               <TableCell align="center">Age</TableCell>
               <TableCell align="center">Tag</TableCell>
               <TableCell align="center">Status</TableCell>
@@ -123,12 +167,14 @@ export default function SimpleTable() {
                     </TableCell>
                     <TableCell align="center">{pet.name}</TableCell>
                     <TableCell align="center">{pet.type}</TableCell>
+                    <TableCell align="center">{pet.breed}</TableCell>
+                    <TableCell align="center">{pet.sex}</TableCell>
                     <TableCell align="center">{pet.age}</TableCell>
                     <TableCell align="center">{pet.tag}</TableCell>
                     <TableCell align="center">{pet.status}</TableCell>
                     <TableCell align="center">
-                      <Button>Update</Button>
-                      <Button>Delete</Button>
+                      <Button color="primary">Update</Button>
+                      <Button color="primary">Delete</Button>
                     </TableCell>
                   </TableRow>
                 )
@@ -146,7 +192,8 @@ export default function SimpleTable() {
               <Form.Label>Name</Form.Label>
               <Form.Control
                 type="text"
-                onChange={(e) => setNamePet(e.target.value)}
+                placeholder="Pet name"
+                onChange={(e) => setName(e.target.value)}
               />
             </Form.Group>
             <Form.Group controlId="exampleForm.ControlInput1">
@@ -161,7 +208,7 @@ export default function SimpleTable() {
               <Form.File
                 id="exampleFormControlFile1"
                 label="Pet photo"
-                value={photoPet}
+                value={photo}
               />
             </Form.Group>
             <Form.Group controlId="exampleForm.ControlInput1">
@@ -196,7 +243,16 @@ export default function SimpleTable() {
                 onChange={(e) => setTag(e.target.value)}
               />
             </Form.Group>
-            <Button>Add pet for adoption</Button>
+            <Form.Group controlId="exampleForm.ControlTextarea1">
+              <Form.Label>Story</Form.Label>
+              <Form.Control
+                  as="textarea"
+                  rows="3"
+                  placeholder="Pet life story"
+                  onChange={(e) => setStory(e.target.value)}
+              />
+            </Form.Group>
+            <Button color="primary" onClick={handleSubmit}>Add pet for adoption</Button>
           </Form>
         </GridItem>
       </GridContainer>

@@ -32,8 +32,17 @@ const AnimalSchema = mongoose.Schema({
     },
     story: {
         type: String,
-        required: false
-    }
+        required: true
+    },
+    breed: {
+        type: String,
+        required: true
+    },
+    sex: {
+        type: String,
+        required: true
+    },
+
 });
 
 // export model animal with AnimalSchema

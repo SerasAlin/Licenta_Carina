@@ -56,11 +56,6 @@ export default function ProfilePage(props) {
       .then((data) => handleResponse(data));
   }, []);
 
-  var imageStyle = {
-    width: "100px",
-    height: "100px",
-  };
-
   function handleResponse(data) {
     setName(data.username);
     setEmail(data.email);
@@ -68,11 +63,9 @@ export default function ProfilePage(props) {
     setCity(data.city);
     setDesc(data.desc);
     setPhone(data.phone);
-    if (photo === "") {
+    if (data.photo === "") {
       setPhoto("faces/dummyAvatar.png");
     }
-
-    console.log(data.photo);
   }
 
   return (
@@ -88,7 +81,7 @@ export default function ProfilePage(props) {
         }}
         {...rest}
       />
-      <Parallax small filter image={require("assets/img/profile-bg.jpg")} />
+        <Parallax small filter image={require("assets/img/profile-bg.jpg")} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
           <div className={classes.container}>
@@ -97,7 +90,6 @@ export default function ProfilePage(props) {
                 <div className={classes.profile}>
                   <div>
                     <img
-                      style={imageStyle}
                       src={`../img/${photo}`}
                       alt="..."
                       className={imageClasses}

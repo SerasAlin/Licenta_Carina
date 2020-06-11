@@ -53,7 +53,7 @@ export default function HeaderLinks(props) {
       {auth.isAuthenticated() && (
         <ListItem className={classes.listItem}>
           <Button
-            href="/login-page"
+            href="/profile-page"
             color="transparent"
             className={classes.navLink}
           >

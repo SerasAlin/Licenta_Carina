@@ -41,7 +41,9 @@ router.post(
             photo,
             tag,
             master_id,
-            story
+            story,
+            breed,
+            sex
         } = req.body;
         try {
             let animal = await Animal.findOne({
@@ -60,7 +62,9 @@ router.post(
                 photo,
                 tag,
                 master_id,
-                story
+                story,
+                breed,
+                sex
             });
             await animal.save();
             res.status(200).json({

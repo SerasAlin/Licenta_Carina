@@ -8,7 +8,7 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
-import Button from "@material-ui/core/Button";
+import Button from "components/CustomButtons/Button.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Check from "@material-ui/core/SvgIcon/SvgIcon";
 import SnackbarContent from "../Snackbar/SnackbarContent";
@@ -151,7 +151,7 @@ export default function SimpleTable(props) {
           onChange={(e) => setDesc(e.target.value)}
         />
       </Form.Group>
-      <Button onClick={handleSubmit}>Update profile</Button>
+      <Button color="primary" onClick={handleSubmit}>Update profile</Button>
     </Form>
   );
 }
