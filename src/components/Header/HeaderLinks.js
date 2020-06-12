@@ -107,9 +107,6 @@ export default function HeaderLinks(props) {
             <Link to="/adopt-page" className={classes.dropdownLink}>
               Adopt
             </Link>,
-            <Link to="/lost-page" className={classes.dropdownLink}>
-              Lost
-            </Link>,
             <Link to="/volunteer-page" className={classes.dropdownLink}>
               Volunteer
             </Link>,

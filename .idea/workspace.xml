@@ -5,70 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92d008db-f2b3-4d66-9875-be852b211b5a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node-api/routes/animal.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-api/routes/animal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/apple-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/apple-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/bg2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/bg3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/bg4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/examples/clem-onojegaw.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/examples/clem-onojeghuo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/examples/cynthia-del-rio.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/examples/mariya-georgieva.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/examples/olu-eletu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/examples/studio-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/examples/studio-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/examples/studio-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/examples/studio-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/examples/studio-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/faces/camp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/faces/card-profile1-square.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/faces/card-profile2-square.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/faces/card-profile4-square.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/faces/card-profile5-square.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/faces/card-profile6-square.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/faces/christian.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/faces/kendall.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/faces/marc.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/landing.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/profile.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/sign.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/examples/clem-onojegaw.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/examples/clem-onojeghuo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/examples/cynthia-del-rio.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/examples/mariya-georgieva.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/examples/olu-eletu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/examples/studio-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/examples/studio-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/examples/studio-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/examples/studio-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/examples/studio-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/faces/camp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/faces/card-profile1-square.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/faces/card-profile2-square.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/faces/card-profile4-square.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/faces/card-profile5-square.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/faces/card-profile6-square.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/faces/christian.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/faces/kendall.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/faces/marc.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/jss/material-kit-react.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/jss/material-kit-react.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/material-kit-react.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/material-kit-react.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EditProfileTable/EditProfileTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditProfileTable/EditProfileTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ForAdoptionTable/ForAdoptionTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ForAdoptionTable/ForAdoptionTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MyPetsTable/MyPetsTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyPetsTable/MyPetsTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/AdoptPage/AdoptPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AdoptPage/AdoptPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/LoginPage/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LoginPage/LoginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/PetProfilePage/PetProfilePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PetProfilePage/PetProfilePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/ProfilePage/ProfilePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ProfilePage/ProfilePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/RegisterPage/RegisterPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/RegisterPage/RegisterPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/VolunteerPage/VolunteerPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/VolunteerPage/VolunteerPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderLinks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderLinks.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ForAdoptionTable/ForAdoptionTable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="194" column="27" selection-start-line="194" selection-start-column="27" selection-end-line="194" selection-end-column="27" />
+            <state relative-caret-position="444">
+              <caret line="199" column="10" lean-forward="true" selection-start-line="199" selection-start-column="10" selection-end-line="199" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -118,6 +55,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="151" column="9" lean-forward="true" selection-start-line="151" selection-start-column="9" selection-end-line="151" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Header/HeaderLinks.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="108" column="20" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="20" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -203,7 +152,6 @@
         <option value="$PROJECT_DIR$/node-api/model/animal.js" />
         <option value="$PROJECT_DIR$/src/protected.route.js" />
         <option value="$PROJECT_DIR$/src/views/LandingPage/LandingPage.js" />
-        <option value="$PROJECT_DIR$/src/components/Header/HeaderLinks.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/assets/scss/material-kit-react.scss" />
         <option value="$PROJECT_DIR$/src/assets/jss/material-kit-react.js" />
@@ -219,6 +167,7 @@
         <option value="$PROJECT_DIR$/node-api/routes/user.js" />
         <option value="$PROJECT_DIR$/src/components/EditProfileTable/EditProfileTable.js" />
         <option value="$PROJECT_DIR$/src/components/ForAdoptionTable/ForAdoptionTable.js" />
+        <option value="$PROJECT_DIR$/src/components/Header/HeaderLinks.js" />
       </list>
     </option>
   </component>
@@ -308,6 +257,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="ForAdoptionTable" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Header" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
@@ -442,12 +398,12 @@
       <workItem from="1591604764865" duration="16350000" />
       <workItem from="1591790285853" duration="7175000" />
       <workItem from="1591887719864" duration="8759000" />
-      <workItem from="1591961164309" duration="11342000" />
+      <workItem from="1591961164309" duration="11548000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142612000" />
+    <option name="totallyTimeSpent" value="142818000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -680,16 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/HeaderLinks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="39" column="49" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node-api/model/animal.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
@@ -825,8 +771,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ForAdoptionTable/ForAdoptionTable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="194" column="27" selection-start-line="194" selection-start-column="27" selection-end-line="194" selection-end-column="27" />
+        <state relative-caret-position="444">
+          <caret line="199" column="10" lean-forward="true" selection-start-line="199" selection-start-column="10" selection-end-line="199" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/HeaderLinks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="108" column="20" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
