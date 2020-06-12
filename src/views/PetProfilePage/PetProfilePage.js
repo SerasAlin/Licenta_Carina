@@ -14,6 +14,9 @@ import Parallax from "components/Parallax/Parallax.js";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
 import Button from "components/CustomButtons/Button.js";
+import SnackbarContent from "../../components/Snackbar/SnackbarContent";
+import Check from "@material-ui/core/SvgIcon/SvgIcon";
+import TableCell from "../../components/ForAdoptionTable/ForAdoptionTable";
 
 const useStyles = makeStyles(styles);
 
@@ -26,12 +29,17 @@ export default function ProfilePage(props) {
         classes.imgFluid
     );
 
+    const [successMessage, setSuccessMessage] = useState(false);
+
     const [name, setName] = useState('dummyName');
     const [type, setType] = useState('dummyType');
     const [photo, setPhoto] = useState('');
     const [age, setAge] = useState('');
     const [tag, setTag] = useState('');
     const [desc, setDesc] = useState('');
+    const [sex, setSex] = useState('');
+    const [breed, setBreed] = useState('');
+    const [masterId, setMasterId] = useState('');
 
 
     const [userName, setUserName] = useState('dummyName');
@@ -78,6 +86,9 @@ export default function ProfilePage(props) {
         setAge(data.age);
         setTag(data.tag);
         setDesc(data.story);
+        setBreed(data.breed);
+        setSex(data.sex);
+        setMasterId(data.master_id);
 
 
         if (data.photo === "") {
@@ -98,6 +109,46 @@ export default function ProfilePage(props) {
             setUserPhoto("faces/dummyAvatar.png");
         }
     }
+
+    function adoptPet(tag) {
+        const requestOptions = {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+                'tag': tag
+            },
+            body: JSON.stringify({
+                status: "Adopted",
+                master_id: masterId
+            }),
+        };
+
+        fetch("http://localhost:4000/animal/update-animal", requestOptions)
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                setSuccessMessage(true);
+                setTimeout(() => {
+                    setSuccessMessage(false);
+                }, 5000);
+            });
+    }
+
+    function SuccessMessage() {
+        return (
+            <SnackbarContent
+                message={<span>Success! Go to your profile to see your pet</span>}
+                close
+                color="success"
+                icon={Check}
+            />
+        );
+    }
+
+    var imageStyle = {
+        width: "100px",
+        height: "100px",
+    };
 
     return (
         <div>
@@ -120,18 +171,26 @@ export default function ProfilePage(props) {
                             <GridItem xs={6} sm={3} md={3}>
                                 <div className={classes.profile}>
                                     <div>
-                                        <img
-                                            src={`../img/${photo}`}
-                                            alt="..."
-                                            className={imageClasses}
-                                        />
+                                        {
+                                            photo &&
+                                            <img style={imageStyle} src={`../img/${photo}`} alt="..."
+                                                 className={imageClasses}/>
+                                        }
+                                        {
+                                            !photo &&
+                                            <img style={imageStyle} src={`../img/faces/dummyPetAvatar.png`} alt="..."
+                                                 className={imageClasses}/>
+                                        }
                                     </div>
                                     <div className={classes.name}>
                                         <h3 className={classes.title}>{name}</h3>
                                         <h6>{desc}</h6>
                                         <h6>Type : {type}</h6>
+                                        <h6>Breed : {breed}</h6>
+                                        <h6>Sex : {sex}</h6>
                                         <h6>Age: {age}</h6>
                                         <h6>Tag: {tag}</h6>
+                                        <h6>Story: {desc}</h6>
                                     </div>
                                 </div>
                             </GridItem>
@@ -143,39 +202,34 @@ export default function ProfilePage(props) {
                                 </div>
                                 <br/>
                                 <br/>
-                                <Button style={{marginLeft: "60px"}} variant="contained" size="large" color="primary"
+                                <Button onClick={() => adoptPet(tag)} style={{marginLeft: "60px"}} variant="contained"
+                                        size="large" color="primary"
                                         className={classes.margin}>
                                     Adopt!
                                 </Button>
+                                {successMessage && <SuccessMessage/>}
                             </GridItem>
                             <GridItem xs={6} sm={3} md={3}>
                                 <div className={classes.profile}>
-                                    {
-                                        photo &&
-                                        <div>
-                                            <img src={`../img/${userPhoto}`} alt="..." className={imageClasses}/>
-                                        </div>
-                                    }
-                                    {
-                                        photo &&
-                                        <div className={classes.name}>
-                                            <h3 className={classes.title}>{userName}</h3>
-                                            <h6>{userDesc}</h6>
-                                            <h6>{userEmail}</h6>
-                                            <h6>{userCity}</h6>
-                                            <h6>{userPhone}</h6>
-                                        </div>
-                                    }
-                                    {
-                                        !photo &&
-                                        <div className={classes.name} style={{marginTop: "10px"}}>
-                                            <h3 className={classes.title}>{userName}</h3>
-                                            <h6>{userDesc}</h6>
-                                            <h6>{userEmail}</h6>
-                                            <h6>{userCity}</h6>
-                                            <h6>{userPhone}</h6>
-                                        </div>
-                                    }
+                                    <div>
+                                        {
+                                            userPhoto &&
+                                            <img style={imageStyle} src={`../img/${userPhoto}`} alt="..."
+                                                 className={imageClasses}/>
+                                        }
+                                        {
+                                            !userPhoto &&
+                                            <img style={imageStyle} src={`../img/faces/dummyPetAvatar.png`} alt="..."
+                                                 className={imageClasses}/>
+                                        }
+                                    </div>
+                                    <div className={classes.name}>
+                                        <h3 className={classes.title}>{userName}</h3>
+                                        <h6>{userDesc}</h6>
+                                        <h6>{userEmail}</h6>
+                                        <h6>{userCity}</h6>
+                                        <h6>{userPhone}</h6>
+                                    </div>
                                 </div>
                             </GridItem>
                         </GridContainer>

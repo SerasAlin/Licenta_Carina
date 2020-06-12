@@ -193,7 +193,7 @@ export default function SimpleTable(props) {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
-                'tag': tag
+                "tag": tag
             }
         };
 

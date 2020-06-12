@@ -118,7 +118,7 @@ router.put("/update-animal", async (req, res) => {
 
 router.delete("/delete-animal", async (req, res) => {
     try {
-        let myQuery = req.header.tag;
+        let myQuery = {tag: req.header("tag")};
         const animal = await Animal.deleteOne(myQuery);
         res.json(animal);
     } catch (e) {
