@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92d008db-f2b3-4d66-9875-be852b211b5a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderLinks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderLinks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MyPetsTable/MyPetsTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyPetsTable/MyPetsTable.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +18,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ForAdoptionTable/ForAdoptionTable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="199" column="10" lean-forward="true" selection-start-line="199" selection-start-column="10" selection-end-line="199" selection-end-column="10" />
+            <state relative-caret-position="376">
+              <caret line="261" column="52" lean-forward="true" selection-start-line="250" selection-start-column="39" selection-end-line="261" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/MyPetsTable/MyPetsTable.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="331">
+              <caret line="96" column="44" selection-start-line="96" selection-start-column="44" selection-end-line="96" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#49#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Header/HeaderLinks.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="108" column="20" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="20" />
+            <state relative-caret-position="246">
+              <caret line="102" column="25" lean-forward="true" selection-start-line="102" selection-start-column="25" selection-end-line="102" selection-end-column="25" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -158,7 +170,6 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/node-api/routes/animal.js" />
         <option value="$PROJECT_DIR$/src/views/LoginPage/LoginPage.js" />
-        <option value="$PROJECT_DIR$/src/components/MyPetsTable/MyPetsTable.js" />
         <option value="$PROJECT_DIR$/src/views/AdoptPage/AdoptPage.js" />
         <option value="$PROJECT_DIR$/src/views/ProfilePage/ProfilePage.js" />
         <option value="$PROJECT_DIR$/src/views/VolunteerPage/VolunteerPage.js" />
@@ -168,6 +179,7 @@
         <option value="$PROJECT_DIR$/src/components/EditProfileTable/EditProfileTable.js" />
         <option value="$PROJECT_DIR$/src/components/ForAdoptionTable/ForAdoptionTable.js" />
         <option value="$PROJECT_DIR$/src/components/Header/HeaderLinks.js" />
+        <option value="$PROJECT_DIR$/src/components/MyPetsTable/MyPetsTable.js" />
       </list>
     </option>
   </component>
@@ -193,57 +205,12 @@
             <path>
               <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="node-api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="node-api" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="faces" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="faces" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
@@ -263,77 +230,7 @@
               <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="MyPetsTable" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="AdoptPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="LandingPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="LandingPage" type="462c0819:PsiDirectoryNode" />
-              <item name="Sections" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="LoginPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="PetProfilePage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="ProfilePage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="RegisterPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="VolunteerPage" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -398,12 +295,12 @@
       <workItem from="1591604764865" duration="16350000" />
       <workItem from="1591790285853" duration="7175000" />
       <workItem from="1591887719864" duration="8759000" />
-      <workItem from="1591961164309" duration="11548000" />
+      <workItem from="1591961164309" duration="11644000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142818000" />
+    <option name="totallyTimeSpent" value="142914000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -650,16 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MyPetsTable/MyPetsTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/LandingPage/Sections/DescriptionSection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -769,19 +656,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ForAdoptionTable/ForAdoptionTable.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Header/HeaderLinks.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="199" column="10" lean-forward="true" selection-start-line="199" selection-start-column="10" selection-end-line="199" selection-end-column="10" />
+        <state relative-caret-position="246">
+          <caret line="102" column="25" lean-forward="true" selection-start-line="102" selection-start-column="25" selection-end-line="102" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/HeaderLinks.js">
+    <entry file="file://$PROJECT_DIR$/src/components/ForAdoptionTable/ForAdoptionTable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="108" column="20" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="20" />
+        <state relative-caret-position="376">
+          <caret line="261" column="52" lean-forward="true" selection-start-line="250" selection-start-column="39" selection-end-line="261" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MyPetsTable/MyPetsTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="96" column="44" selection-start-line="96" selection-start-column="44" selection-end-line="96" selection-end-column="44" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>

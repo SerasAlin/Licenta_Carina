@@ -83,10 +83,18 @@ export default function SimpleTable() {
                         pet.status === "Adopted" &&
                         <TableRow key={pet.tag}>
                             <TableCell component="th" scope="row">
-                                <div>
-                                    <img style={imageStyle} src={`../img/${pet.photo}`} alt="..."
-                                         className={imageClasses}/>
-                                </div>
+                                <TableCell align="center" component="th" scope="row">
+                                    {
+                                        pet.photo &&
+                                        <img style={imageStyle} src={`../img/${pet.photo}`} alt="..."
+                                             className={imageClasses}/>
+                                    }
+                                    {
+                                        !pet.photo &&
+                                        <img style={imageStyle} src={`../img/faces/dummyPetAvatar.png`} alt="..."
+                                             className={imageClasses}/>
+                                    }
+                                </TableCell>
                             </TableCell>
                             <TableCell align="center">{pet.name}</TableCell>
                             <TableCell align="center">{pet.type}</TableCell>
