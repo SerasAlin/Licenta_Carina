@@ -33,7 +33,6 @@ export default function ProfilePage(props) {
     classes.imgRoundedCircle,
     classes.imgFluid
   );
-  const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
 
   const [name, setName] = useState("dummyName");
   const [email, setEmail] = useState("dummyEmail");

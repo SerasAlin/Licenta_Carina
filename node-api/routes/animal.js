@@ -107,7 +107,7 @@ router.get("/all-animals", async (req, res) => {
 
 router.put("/update-animal", async (req, res) => {
     try {
-        let myQuery = req.header.tag;
+        let myQuery = {tag: req.header("tag")};
         let newValues = { $set: req.body};
         const animal = await Animal.updateOne(myQuery, newValues);
         res.json(animal);

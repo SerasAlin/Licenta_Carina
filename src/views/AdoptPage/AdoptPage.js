@@ -21,9 +21,6 @@ import TableRow from '@material-ui/core/TableRow';
 
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
-// Sections for this page
-import ProductSection from "../../views/LandingPage/Sections/DescriptionSection";
-import {Image} from "@material-ui/icons";
 import Paper from "@material-ui/core/Paper/Paper";
 
 const dashboardRoutes = [];

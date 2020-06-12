@@ -1,26 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Form from "react-bootstrap/Form";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
 import Button from "components/CustomButtons/Button.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Check from "@material-ui/core/SvgIcon/SvgIcon";
 import SnackbarContent from "../Snackbar/SnackbarContent";
 
-const useStyles = makeStyles({
-  table: {
-    minWidth: 650,
-  },
-});
-
 export default function SimpleTable(props) {
-  const classes = useStyles();
 
   const [id, setId] = useState("");
   const [name, setName] = useState("");
@@ -53,6 +39,7 @@ export default function SimpleTable(props) {
     setCity(data.city);
     setDesc(data.desc);
     setPhone(data.phone);
+    setPhoto(data.photo);
 
     console.log(id);
   }
@@ -62,7 +49,7 @@ export default function SimpleTable(props) {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
-        id: id,
+        "id": id
       },
       body: JSON.stringify({
         username: name,
@@ -70,6 +57,7 @@ export default function SimpleTable(props) {
         city: city,
         desc: desc,
         phone: phone,
+        // photo: "faces/".concat(photo)
       }),
     };
 
@@ -120,7 +108,7 @@ export default function SimpleTable(props) {
         <Form.File
           id="exampleFormControlFile1"
           label="Profile photo"
-          value={photo}
+          onChange={(e) => setPhoto(e.target.value)}
         />
       </Form.Group>
       <Form.Group controlId="exampleForm.ControlInput1">

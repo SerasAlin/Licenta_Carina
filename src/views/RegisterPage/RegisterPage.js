@@ -18,13 +18,10 @@ import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardFooter from "components/Card/CardFooter.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
-import SnackbarContent from "components/Snackbar/SnackbarContent.js";
-
 
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
 import image from "assets/img/bg7.jpg";
-import Check from "@material-ui/core/SvgIcon/SvgIcon";
 
 const useStyles = makeStyles(styles);
 
