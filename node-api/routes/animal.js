@@ -1,6 +1,23 @@
 const express = require("express");
 const { check, validationResult} = require("express-validator");
 const router = express.Router();
+const multer = require('multer');
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, './uploads/')
+    },
+    filename: function(req, file, cb) {
+        cb(null, file.originalname)
+    },
+});
+
+const upload = multer({
+    storage: storage,
+    limits: {
+        fileSize: 1024 * 1024 * 10
+    }
+});
 
 const Animal = require("../model/Animal");
 
@@ -26,8 +43,9 @@ router.post(
             .not()
             .isEmpty()
     ],
+    upload.single('photo'),
     async (req, res) => {
-        const errors = validationResult(req);
+        const errors = validationResult(req.body);
         if (!errors.isEmpty()) {
             return res.status(400).json({
                 errors: errors.array()
@@ -38,13 +56,17 @@ router.post(
             type,
             status,
             age,
-            photo,
             tag,
             master_id,
             story,
             breed,
             sex
         } = req.body;
+        let photo = "";
+        if (req.file) {
+            photo = req.file.path;
+        }
+
         try {
             let animal = await Animal.findOne({
                 tag
@@ -105,9 +127,12 @@ router.get("/all-animals", async (req, res) => {
     }
 });
 
-router.put("/update-animal", async (req, res) => {
+router.put("/update-animal", upload.single('photo'), async (req, res) => {
     try {
         let myQuery = {tag: req.header("tag")};
+        if (req.file) {
+            req.body.photo = req.file.path;
+        }
         let newValues = { $set: req.body};
         const animal = await Animal.updateOne(myQuery, newValues);
         res.json(animal);

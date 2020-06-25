@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -54,7 +54,12 @@ export default function SimpleTable() {
                 };
                 fetch('http://localhost:4000/animal/my-animals', getMyPetsForAdoptionOptions)
                     .then(response => response.json())
-                    .then( data => {
+                    .then(data => {
+                        data.forEach(pet => {
+                            if (pet.photo === "") {
+                                pet.photo = "uploads/img/faces/dummyPetAvatar.png";
+                            }
+                        });
                         setPets(pets => pets.concat(data));
                         console.log(pets);
                     })
@@ -73,6 +78,8 @@ export default function SimpleTable() {
                         <TableCell align="center">Photo</TableCell>
                         <TableCell align="center">Name</TableCell>
                         <TableCell align="center">Type</TableCell>
+                        <TableCell align="center">Breed</TableCell>
+                        <TableCell align="center">Sex</TableCell>
                         <TableCell align="center">Age</TableCell>
                         <TableCell align="center">Tag</TableCell>
                         <TableCell align="center">Status</TableCell>
@@ -82,22 +89,14 @@ export default function SimpleTable() {
                     {pets.map((pet) => (
                         pet.status === "Adopted" &&
                         <TableRow key={pet.tag}>
-                            <TableCell component="th" scope="row">
-                                <TableCell align="center" component="th" scope="row">
-                                    {
-                                        pet.photo &&
-                                        <img style={imageStyle} src={`../img/${pet.photo}`} alt="..."
-                                             className={imageClasses}/>
-                                    }
-                                    {
-                                        !pet.photo &&
-                                        <img style={imageStyle} src={`../img/faces/dummyPetAvatar.png`} alt="..."
-                                             className={imageClasses}/>
-                                    }
-                                </TableCell>
+                            <TableCell align="center" component="th" scope="row">
+                                <img style={imageStyle} src={`http://localhost:4000/${pet.photo}`} alt="..."
+                                     className={imageClasses}/>
                             </TableCell>
                             <TableCell align="center">{pet.name}</TableCell>
                             <TableCell align="center">{pet.type}</TableCell>
+                            <TableCell align="center">{pet.breed}</TableCell>
+                            <TableCell align="center">{pet.sex}</TableCell>
                             <TableCell align="center">{pet.age}</TableCell>
                             <TableCell align="center">{pet.tag}</TableCell>
                             <TableCell align="center">{pet.status}</TableCell>

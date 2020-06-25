@@ -40,8 +40,8 @@ export default function AdoptPage(props) {
   );
 
   var imageStyle = {
-    width: "100px",
-    height: "100px",
+    width: "120px",
+    height: "80px",
   };
 
   useEffect(() => {
@@ -61,6 +61,11 @@ export default function AdoptPage(props) {
         fetch("http://localhost:4000/animal/all-animals")
           .then((response) => response.json())
           .then((data) => {
+            data.forEach(pet => {
+              if (pet.photo === "") {
+                pet.photo = "uploads/img/faces/dummyPetAvatar.png";
+              }
+            });
             setPets((pets) => pets.concat(data));
             console.log(pets);
           });
@@ -122,22 +127,12 @@ export default function AdoptPage(props) {
                       pet.status === "For adoption" && (
                         <TableRow key={pet.tag}>
                           <TableCell align="center" component="th" scope="row">
-                            {pet.photo && (
-                              <img
+                            <img
                                 style={imageStyle}
-                                src={`../img/${pet.photo}`}
+                                src={`http://localhost:4000/${pet.photo}`}
                                 alt="..."
                                 className={imageClasses}
-                              />
-                            )}
-                            {!pet.photo && (
-                              <img
-                                style={imageStyle}
-                                src={`../img/faces/dummyPetAvatar.png`}
-                                alt="..."
-                                className={imageClasses}
-                              />
-                            )}
+                            />
                           </TableCell>
                           <TableCell align="center">{pet.name}</TableCell>
                           <TableCell align="center">{pet.type}</TableCell>

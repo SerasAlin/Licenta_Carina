@@ -1,9 +1,23 @@
 const express = require("express");
-const { check, validationResult} = require("express-validator");
+const {check, validationResult} = require("express-validator");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const auth = require("../middleware/auth");
 const router = express.Router();
+const multer = require('multer');
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, './uploads')
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.originalname)
+    },
+});
+
+const upload = multer({
+    storage: storage
+});
 
 const User = require("../model/User");
 
@@ -37,6 +51,17 @@ router.post(
             email,
             password,
         } = req.body;
+        const {
+            photo,
+            phone,
+            city,
+            desc
+        } = {
+            photo: "",
+            phone: "",
+            city: "",
+            desc: ""
+        };
         try {
             let user = await User.findOne({
                 email
@@ -50,7 +75,11 @@ router.post(
             user = new User({
                 username,
                 email,
-                password
+                password,
+                photo,
+                phone,
+                city,
+                desc
             });
 
             const salt = await bcrypt.genSalt(10);
@@ -98,7 +127,7 @@ router.post(
             });
         }
 
-        const { email, password } = req.body;
+        const {email, password} = req.body;
         try {
             let user = await User.findOne({
                 email
@@ -144,7 +173,7 @@ router.get("/user-animal", async (req, res) => {
         const user = await User.findById(req.header("master_id"));
         res.json(user);
     } catch (e) {
-        res.send({ message: "Error in Fetching pet" });
+        res.send({message: "Error in Fetching pet"});
     }
 });
 
@@ -153,18 +182,21 @@ router.get("/all-users", async (req, res) => {
         const animal = await User.find();
         res.json(animal);
     } catch (e) {
-        res.send({ message: "Error in Fetching users" });
+        res.send({message: "Error in Fetching users"});
     }
 });
 
-router.put("/update-user", async (req, res) => {
+router.put("/update-user", upload.single('photo'), async (req, res) => {
     try {
-        let myQuery = req.header.id;
-        let newValues = { $set: req.body};
+        let myQuery = {_id: req.header("id")};
+        if (req.file) {
+            req.body.photo = req.file.path;
+        }
+        let newValues = {$set: req.body};
         const user = await User.updateOne(myQuery, newValues);
         res.json(user);
     } catch (e) {
-        res.send({ message: "Error in Update user" });
+        res.send({message: "Error in Update user"});
     }
 });
 
@@ -174,7 +206,7 @@ router.delete("/delete-user", async (req, res) => {
         const user = await User.deleteOne(myQuery);
         res.json(user);
     } catch (e) {
-        res.send({ message: "Error in Delete user" });
+        res.send({message: "Error in Delete user"});
     }
 });
 
@@ -184,7 +216,7 @@ router.get("/me", auth, async (req, res) => {
         const user = await User.findById(req.user.id);
         res.json(user);
     } catch (e) {
-        res.send({ message: "Error in Fetching user" });
+        res.send({message: "Error in Fetching user"});
     }
 });
 

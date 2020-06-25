@@ -21,6 +21,8 @@ var allowCrossDomain = function(req, res, next) {
     next();
 };
 
+app.use('/uploads', express.static('uploads'));
+
 app.use(allowCrossDomain);
 
 // Middleware

@@ -7,7 +7,7 @@ import CardDeck from "react-bootstrap/CardDeck";
 import Button from "react-bootstrap/Button";
 import GridContainer from "components/Grid/GridContainer";
 import GridItem from "components/Grid/GridItem";
-import "views/VolunteerPage/VolunteerPage.css";
+// import "views/VolunteerPage/VolunteerPage.css";
 import VolunteerTable from "../../components/VolunteerTable/VolunteerTable";
 import LostTable from "../../components/LostTable/LostTable";
 import AddPostForm from "../../components/AddPostForm/AddPostForm";

@@ -58,8 +58,8 @@ export default function SimpleTable(props) {
     );
 
     var imageStyle = {
-        width: "60px",
-        height: "60px",
+        width: "120px",
+        height: "80px",
     };
 
     useEffect(() => {
@@ -90,29 +90,42 @@ export default function SimpleTable(props) {
                 )
                     .then((response) => response.json())
                     .then((data) => {
+                        data.forEach(pet => {
+                            if (pet.photo === "") {
+                                pet.photo = "uploads/img/faces/dummyPetAvatar.png";
+                            }
+                        });
                         setPets((pets) => pets.concat(data));
-                        console.log(pets);
                     });
             });
     }, []);
 
     function addPetSubmit() {
+        const formData = new FormData();
+        if(photo)
+            formData.append('photo', photo);
+        if(name)
+            formData.append('name', name);
+        if(type)
+            formData.append('type', type);
+        formData.append('status', "For adoption");
+        if(age)
+            formData.append('age', age);
+        if(tag)
+            formData.append('tag', tag);
+        formData.append('master_id', masterId);
+        if(story)
+            formData.append('story', story);
+        if(breed)
+            formData.append('breed', breed);
+        if(sex)
+            formData.append('sex', sex);
+
         const requestOptions = {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
             },
-            body: JSON.stringify({
-                name: name,
-                type: type,
-                status: "For adoption",
-                age: age,
-                tag: tag,
-                master_id: masterId,
-                story: story,
-                breed: breed,
-                sex: sex,
-            }),
+            body: formData
         };
 
         fetch("http://localhost:4000/animal/register-animal", requestOptions)
@@ -122,7 +135,7 @@ export default function SimpleTable(props) {
                 setSuccessMessage(true);
                 setTimeout(() => {
                     setSuccessMessage(false);
-                }, 2000);
+                }, 5000);
             });
     }
 
@@ -156,21 +169,28 @@ export default function SimpleTable(props) {
     }
 
     function updatePetSubmit() {
-        console.log(specificTag);
+        const formData = new FormData();
+        if(specificPhoto)
+            formData.append('photo', specificPhoto);
+        if(specificName)
+            formData.append('name', specificName);
+        if(specificType)
+            formData.append('type', specificType);
+        if(specificAge)
+            formData.append('age', specificAge);
+        if(specificStory)
+            formData.append('story', specificStory);
+        if(specificBreed)
+            formData.append('breed', specificBreed);
+        if(specificSex)
+            formData.append('sex', specificSex);
+
         const requestOptions = {
             method: "PUT",
             headers: {
-                "Content-Type": "application/json",
                 'tag': specificTag
             },
-            body: JSON.stringify({
-                name: specificName,
-                type: specificType,
-                age: specificAge,
-                story: specificStory,
-                breed: specificBreed,
-                sex: specificSex,
-            }),
+            body: formData
         };
 
         fetch("http://localhost:4000/animal/update-animal", requestOptions)
@@ -180,7 +200,7 @@ export default function SimpleTable(props) {
                 setSuccessMessage(true);
                 setTimeout(() => {
                     setSuccessMessage(false);
-                }, 2000);
+                }, 5000);
             });
     }
 
@@ -247,16 +267,8 @@ export default function SimpleTable(props) {
                                 pet.status === "For adoption" && (
                                     <TableRow key={pet.tag}>
                                         <TableCell align="center" component="th" scope="row">
-                                            {
-                                                pet.photo &&
-                                                <img style={imageStyle} src={`../img/${pet.photo}`} alt="..."
-                                                     className={imageClasses}/>
-                                            }
-                                            {
-                                                !pet.photo &&
-                                                <img style={imageStyle} src={`../img/faces/dummyPetAvatar.png`} alt="..."
-                                                     className={imageClasses}/>
-                                            }
+                                            <img style={imageStyle} src={`http://localhost:4000/${pet.photo}`} alt="..."
+                                                 className={imageClasses}/>
                                         </TableCell>
                                         <TableCell align="center">{pet.name}</TableCell>
                                         <TableCell align="center">{pet.type}</TableCell>
@@ -281,7 +293,7 @@ export default function SimpleTable(props) {
             {
                 showUpdateForm &&
                 <GridContainer justify="center">
-                    <h4>Update {specificTag} pet information</h4>
+                    <h4>Update {specificName} - {specificTag} pet information</h4>
                     <GridItem xs={8}>
                         <Form>
                             <Form.Group controlId="exampleForm.ControlInput1">
@@ -306,7 +318,7 @@ export default function SimpleTable(props) {
                                 <Form.File
                                     id="exampleFormControlFile1"
                                     label="Pet photo"
-                                    onChange={(e) => setSpecificPhoto(e.target.value)}
+                                    onChange={(e) => setSpecificPhoto(e.target.files[0])}
                                 />
                             </Form.Group>
                             <Form.Group controlId="exampleForm.ControlInput1">
@@ -377,7 +389,7 @@ export default function SimpleTable(props) {
                                 <Form.File
                                     id="exampleFormControlFile1"
                                     label="Pet photo"
-                                    onChange={(e) => setPhoto(e.target.value)}
+                                    onChange={(e) => setPhoto(e.target.files[0])}
                                 />
                             </Form.Group>
                             <Form.Group controlId="exampleForm.ControlInput1">

@@ -5,9 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92d008db-f2b3-4d66-9875-be852b211b5a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node-api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-api/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node-api/routes/animal.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-api/routes/animal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node-api/routes/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-api/routes/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node-api/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-api/routes/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/bg7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/node-api/uploads/img/bg7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/faces/avatar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/faces/dummyAvatar.png" beforeDir="false" afterPath="$PROJECT_DIR$/node-api/uploads/img/faces/dummyAvatar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/faces/dummyPetAvatar.png" beforeDir="false" afterPath="$PROJECT_DIR$/node-api/uploads/img/faces/dummyPetAvatar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/landing-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/node-api/uploads/img/landing-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/pets.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/node-api/uploads/img/pets.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/profile-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/node-api/uploads/img/profile-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditProfileTable/EditProfileTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditProfileTable/EditProfileTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ForAdoptionTable/ForAdoptionTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ForAdoptionTable/ForAdoptionTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MyPetsTable/MyPetsTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyPetsTable/MyPetsTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/AdoptPage/AdoptPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AdoptPage/AdoptPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/PetProfilePage/PetProfilePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PetProfilePage/PetProfilePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ProfilePage/ProfilePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ProfilePage/ProfilePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/VolunteerPage/VolunteerPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/VolunteerPage/VolunteerPage.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,10 +35,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node-api/routes/user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2856">
+              <caret line="190" column="42" selection-start-line="190" selection-start-column="42" selection-end-line="190" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ForAdoptionTable/ForAdoptionTable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="59" column="22" lean-forward="true" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+            <state relative-caret-position="209">
+              <caret line="260" column="73" lean-forward="true" selection-start-line="252" selection-start-column="28" selection-end-line="260" selection-end-column="73" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
               </folding>
@@ -32,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/ProfilePage/ProfilePage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="64" selection-start-line="64" selection-end-line="66" selection-end-column="5" />
+            <state relative-caret-position="316">
+              <caret line="52" selection-start-line="52" selection-end-line="55" selection-end-column="9" />
               <folding>
                 <element signature="e#140#194#0" expanded="true" />
                 <element signature="e#262#305#0" expanded="true" />
@@ -44,25 +70,39 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/EditProfileTable/EditProfileTable.js">
+        <entry file="file://$PROJECT_DIR$/node-api/routes/animal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-527">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="221">
+              <caret line="109" column="3" lean-forward="true" selection-start-line="109" selection-start-column="3" selection-end-line="109" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/AdoptPage/AdoptPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="131" column="60" selection-start-line="131" selection-start-column="38" selection-end-line="131" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/PetProfilePage/PetProfilePage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="29" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/views/PetProfilePage/PetProfilePage.js">
+        <entry file="file://$PROJECT_DIR$/src/components/MyPetsTable/MyPetsTable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="189" column="54" selection-start-line="189" selection-start-column="54" selection-end-line="189" selection-end-column="54" />
+            <state relative-caret-position="200">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
               <folding>
-                <element signature="e#140#192#0" expanded="true" />
-                <element signature="e#255#304#0" expanded="true" />
+                <element signature="e#0#49#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,10 +112,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cardHidden</find>
-      <find>auth.login</find>
-      <find>login</find>
-      <find>prop</find>
       <find>findBy</find>
       <find>localSt</find>
       <find>count</find>
@@ -102,6 +138,10 @@
       <find>updatePe</find>
       <find>localS</find>
       <find>successMessage</find>
+      <find>lost pets</find>
+      <find>Success!</find>
+      <find>masterId</find>
+      <find>concat</find>
     </findStrings>
     <replaceStrings>
       <replace>pet</replace>
@@ -125,14 +165,11 @@
         <option value="$PROJECT_DIR$/src/views/LandingPage/Sections/ProductSection.js" />
         <option value="$PROJECT_DIR$/src/views/LandingPage/Sections/DescriptionSection.js" />
         <option value="$PROJECT_DIR$/src/views/AdoptPage/Sections/AdoptSection.js" />
-        <option value="$PROJECT_DIR$/node-api/model/user.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/node-api/AdminPanelComponents/Dashboard.jsx" />
         <option value="$PROJECT_DIR$/node-api/adminPanelComponents/Dashboard.jsx" />
         <option value="$PROJECT_DIR$/node-api/routes/admin.js" />
-        <option value="$PROJECT_DIR$/node-api/index.js" />
         <option value="$PROJECT_DIR$/node-api/model/post.js" />
-        <option value="$PROJECT_DIR$/node-api/routes/post.js" />
         <option value="$PROJECT_DIR$/src/components/Card/Card.js" />
         <option value="$PROJECT_DIR$/node-api/model/animal.js" />
         <option value="$PROJECT_DIR$/src/protected.route.js" />
@@ -142,25 +179,28 @@
         <option value="$PROJECT_DIR$/src/assets/jss/material-kit-react.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/views/LoginPage/LoginPage.js" />
-        <option value="$PROJECT_DIR$/src/views/AdoptPage/AdoptPage.js" />
-        <option value="$PROJECT_DIR$/src/views/ProfilePage/ProfilePage.js" />
-        <option value="$PROJECT_DIR$/src/views/VolunteerPage/VolunteerPage.js" />
         <option value="$PROJECT_DIR$/src/views/RegisterPage/RegisterPage.js" />
-        <option value="$PROJECT_DIR$/node-api/routes/user.js" />
-        <option value="$PROJECT_DIR$/src/components/EditProfileTable/EditProfileTable.js" />
         <option value="$PROJECT_DIR$/src/components/Header/HeaderLinks.js" />
-        <option value="$PROJECT_DIR$/src/components/MyPetsTable/MyPetsTable.js" />
+        <option value="$PROJECT_DIR$/src/views/VolunteerPage/VolunteerPage.js" />
+        <option value="$PROJECT_DIR$/node-api/model/user.js" />
+        <option value="$PROJECT_DIR$/node-api/routes/post.js" />
+        <option value="$PROJECT_DIR$/node-api/index.js" />
+        <option value="$PROJECT_DIR$/src/components/EditProfileTable/EditProfileTable.js" />
+        <option value="$PROJECT_DIR$/node-api/routes/user.js" />
+        <option value="$PROJECT_DIR$/src/views/ProfilePage/ProfilePage.js" />
         <option value="$PROJECT_DIR$/node-api/routes/animal.js" />
         <option value="$PROJECT_DIR$/src/components/ForAdoptionTable/ForAdoptionTable.js" />
+        <option value="$PROJECT_DIR$/src/views/AdoptPage/AdoptPage.js" />
         <option value="$PROJECT_DIR$/src/views/PetProfilePage/PetProfilePage.js" />
+        <option value="$PROJECT_DIR$/src/components/MyPetsTable/MyPetsTable.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="134" />
-    <option name="y" value="81" />
-    <option name="width" value="1371" />
-    <option name="height" value="739" />
+    <option name="x" value="-152" />
+    <option name="y" value="168" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -183,7 +223,29 @@
             <path>
               <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="node-api" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
+              <item name="node-api" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
+              <item name="node-api" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
+              <item name="node-api" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="faces" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
@@ -195,6 +257,27 @@
               <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="EditProfileTable" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="ForAdoptionTable" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="material-kit-react-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="MyPetsTable" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="material-kit-react-master" type="b2602c69:ProjectViewProjectNode" />
@@ -232,21 +315,22 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/Elderom" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Users\Alin\Desktop\material-kit-react-master\material-kit-react-master\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Alin\Desktop\material-kit-react-master\material-kit-react-master\public\img\faces" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Alin\Desktop\material-kit-react-master\material-kit-react-master\node-api\uploads" />
       <recent name="C:\Users\Alin\Desktop\material-kit-react-master\material-kit-react-master\src\assets\img" />
       <recent name="C:\Users\Alin\Desktop\material-kit-react-master\material-kit-react-master\public" />
       <recent name="C:\Users\Alin\Desktop\material-kit-react-master\material-kit-react-master\src" />
       <recent name="C:\Users\Alin\Desktop\material-kit-react-master\material-kit-react-master" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alin\Desktop\material-kit-react-master\material-kit-react-master\public\img\faces" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -286,12 +370,15 @@
       <workItem from="1591604764865" duration="16350000" />
       <workItem from="1591790285853" duration="7175000" />
       <workItem from="1591887719864" duration="8759000" />
-      <workItem from="1591961164309" duration="13212000" />
+      <workItem from="1591961164309" duration="13953000" />
+      <workItem from="1593007255596" duration="11000" />
+      <workItem from="1593090992599" duration="6944000" />
+      <workItem from="1593117233148" duration="12040000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144482000" />
+    <option name="totallyTimeSpent" value="164218000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -300,10 +387,10 @@
       <window_info id="Gulp" order="0" side_tool="true" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.16684435" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.16577825" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.2708559" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.2892741" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32394367" />
       <window_info anchor="bottom" id="Database Changes" order="4" />
@@ -325,45 +412,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node-api/model/animal.js</url>
-          <line>14</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node-api/node_modules/express-validator/src/validation-result.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node-api/config/db.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ISSUE_TEMPLATE.md" />
-    <entry file="file://$PROJECT_DIR$/bower.json" />
-    <entry file="file://$PROJECT_DIR$/.eslintrc.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CHANGELOG.md" />
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-887" />
@@ -445,34 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node-api/model/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="6" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node-api/routes/post.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node-api/model/post.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node-api/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Card/Card.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -524,13 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node-api/model/animal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-bootstrap/Form.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -569,13 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/VolunteerPage/VolunteerPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-646">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/RegisterPage/RegisterPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -591,13 +598,6 @@
     <entry file="file://$PROJECT_DIR$/public/img/faces/dummyPetAvatar.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/node-api/routes/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="151" column="9" lean-forward="true" selection-start-line="151" selection-start-column="9" selection-end-line="151" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Header/HeaderLinks.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
@@ -608,47 +608,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MyPetsTable/MyPetsTable.js">
+    <entry file="file://$PROJECT_DIR$/src/views/VolunteerPage/VolunteerPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="100" column="63" selection-start-line="100" selection-start-column="63" selection-end-line="100" selection-end-column="63" />
+        <state relative-caret-position="424">
+          <caret line="138" column="16" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="16" />
           <folding>
-            <element signature="e#0#49#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#496#572#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/LostTable/LostTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-425">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-api/model/post.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-api/model/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-api/uploads/avatar.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-api/routes/post.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="85" column="9" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-api/node_modules/express-validator/src/validation-result.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-api/model/animal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-api/uploads/18034042_1461741537189850_2670902396943788752_n.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-api/uploads/98186610_699217827501218_6822676934061719552_n.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-api/uploads/322868_1100-1100x628.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-api/uploads/images.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-api/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node-api/routes/animal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="118" column="53" lean-forward="true" selection-start-line="118" selection-start-column="53" selection-end-line="118" selection-end-column="53" />
+        <state relative-caret-position="221">
+          <caret line="109" column="3" lean-forward="true" selection-start-line="109" selection-start-column="3" selection-end-line="109" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/AdoptPage/AdoptPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="146" column="111" selection-start-line="146" selection-start-column="72" selection-end-line="146" selection-end-column="111" />
-          <folding>
-            <element signature="e#236#285#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="374">
+          <caret line="131" column="60" selection-start-line="131" selection-start-column="38" selection-end-line="131" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/EditProfileTable/EditProfileTable.js">
+    <entry file="file://$PROJECT_DIR$/node-api/routes/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-527">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2856">
+          <caret line="190" column="42" selection-start-line="190" selection-start-column="42" selection-end-line="190" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/PetProfilePage/PetProfilePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/ProfilePage/ProfilePage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="64" selection-start-line="64" selection-end-line="66" selection-end-column="5" />
+        <state relative-caret-position="316">
+          <caret line="52" selection-start-line="52" selection-end-line="55" selection-end-column="9" />
           <folding>
             <element signature="e#140#194#0" expanded="true" />
             <element signature="e#262#305#0" expanded="true" />
@@ -657,23 +723,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/EditProfileTable/EditProfileTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ForAdoptionTable/ForAdoptionTable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="59" column="22" lean-forward="true" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+        <state relative-caret-position="209">
+          <caret line="260" column="73" lean-forward="true" selection-start-line="252" selection-start-column="28" selection-end-line="260" selection-end-column="73" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/PetProfilePage/PetProfilePage.js">
+    <entry file="file://$PROJECT_DIR$/src/components/MyPetsTable/MyPetsTable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="189" column="54" selection-start-line="189" selection-start-column="54" selection-end-line="189" selection-end-column="54" />
+        <state relative-caret-position="200">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
           <folding>
-            <element signature="e#140#192#0" expanded="true" />
-            <element signature="e#255#304#0" expanded="true" />
+            <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>

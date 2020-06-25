@@ -63,7 +63,7 @@ export default function ProfilePage(props) {
     setDesc(data.desc);
     setPhone(data.phone);
     if (data.photo === "") {
-      setPhoto("faces/dummyAvatar.png");
+        setPhoto("uploads/img/faces/dummyAvatar.png");
     }
   }
 
@@ -89,7 +89,7 @@ export default function ProfilePage(props) {
                 <div className={classes.profile}>
                   <div>
                     <img
-                      src={`../img/${photo}`}
+                      src={`http://localhost:4000/${photo}`}
                       alt="..."
                       className={imageClasses}
                     />
