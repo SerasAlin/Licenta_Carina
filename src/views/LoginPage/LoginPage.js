@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 // @material-ui/core components
-import {makeStyles} from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
@@ -21,7 +21,6 @@ import SnackbarContent from "components/Snackbar/SnackbarContent.js";
 import Check from "@material-ui/icons/Check";
 import auth from "../../../src/auth.js";
 
-
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
 import image from "assets/img/bg7.jpg";
@@ -29,160 +28,159 @@ import image from "assets/img/bg7.jpg";
 const useStyles = makeStyles(styles);
 
 export default function LoginPage(props) {
-    const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
-    setTimeout(function () {
-        setCardAnimation("");
-    }, 700);
-    const classes = useStyles();
-    const {...rest} = props;
+  const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
+  setTimeout(function() {
+    setCardAnimation("");
+  }, 700);
+  const classes = useStyles();
+  const { ...rest } = props;
 
-    function loginUser() {
-        console.log(email);
-        console.log(password);
+  function loginUser() {
+    console.log(email);
+    console.log(password);
 
-        // Simple POST request with a JSON body using fetch
-        const requestOptions = {
-            crossDomain: true,
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({email: email, password: password})
-        };
+    // Simple POST request with a JSON body using fetch
+    const requestOptions = {
+      crossDomain: true,
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: email, password: password }),
+    };
 
-        fetch('http://localhost:4000/user/login', requestOptions)
-            .then(response => response.json())
-            .then(data => handleResponse(data));
+    fetch("http://localhost:4000/user/login", requestOptions)
+      .then((response) => response.json())
+      .then((data) => handleResponse(data));
+  }
 
+  function handleResponse(data) {
+    if (data.token) {
+      auth.login(data.token);
+      props.history.push({
+        pathname: "/profile-page",
+        state: { token: data.token },
+      });
     }
 
-    function handleResponse(data) {
-        if (data.token) {
-            auth.login(data.token);
-            props.history.push({
-                pathname: '/profile-page',
-                state: {token: data.token}
-            })
-        }
-
-        if (data.errors) {
-            const newMessageObj = {errMsg: data.errors[0].msg};
-            setErrMsg(newMessageObj);
-        }
-
-        if (data.message) {
-            const newMessageObj = {errMsg: data.message};
-            setErrMsg(newMessageObj);
-        }
-
+    if (data.errors) {
+      const newMessageObj = { errMsg: data.errors[0].msg };
+      setErrMsg(newMessageObj);
     }
 
-    const [email, setEmail] = useState({email: ""});
-    const [password, setPassword] = useState({password: ""});
-    const [errMsg, setErrMsg] = useState({errMsg: ""});
-
-
-    /**
-     * @return {null}
-     */
-    function Greeting() {
-        if (props.location.state) {
-            return <SnackbarContent
-                message={
-                    <span>
-                     {props.location.state.message}
-          </span>
-                }
-                close
-                color="success"
-                icon={Check}
-            />;
-        }
-        return null;
+    if (data.message) {
+      const newMessageObj = { errMsg: data.message };
+      setErrMsg(newMessageObj);
     }
+  }
 
+  const [email, setEmail] = useState({ email: "" });
+  const [password, setPassword] = useState({ password: "" });
+  const [errMsg, setErrMsg] = useState({ errMsg: "" });
 
-    return (
-        <div>
-            <Header
-                absolute
-                color="transparent"
-                brand="Maynard Pet Shelter"
-                rightLinks={<HeaderLinks/>}
-                {...rest}
-            />
-            <div
-                className={classes.pageHeader}
-                style={{
-                    backgroundImage: "url(" + image + ")",
-                    backgroundSize: "cover",
-                    backgroundPosition: "left"
-                }}
-            >
-                <div className={classes.container}>
-                    <GridContainer justify="center">
-                        <GridItem xs={12} sm={12} md={4}>
-                            <Card className={classes[cardAnimaton]}>
-                                <form className={classes.form}>
-                                    <CardHeader color="primary" className={classes.cardHeader}>
-                                        <h4>Login</h4>
-                                        <Greeting/>
-                                        {errMsg.errMsg !== "" &&
-                                        <span style={{color: "red", backgroundColor: "white"}}>
-                                            {errMsg.errMsg} !
-                                        </span>
-                                        }
-                                    </CardHeader>
-                                    <CardBody>
-                                        <CustomInput
-                                            labelText="Email..."
-                                            id="email"
-                                            formControlProps={{
-                                                fullWidth: true
-                                            }}
-                                            inputProps={{
-                                                type: "email",
-                                                endAdornment: (
-                                                    <InputAdornment position="end">
-                                                        <Email className={classes.inputIconsColor}/>
-                                                    </InputAdornment>
-                                                ),
-                                                onChange: (e => setEmail(e.target.value))
-                                            }}
-                                        />
-                                        <CustomInput
-                                            labelText="Password"
-                                            id="pass"
-                                            formControlProps={{
-                                                fullWidth: true
-                                            }}
-                                            inputProps={{
-                                                type: "password",
-                                                endAdornment: (
-                                                    <InputAdornment position="end">
-                                                        <Icon className={classes.inputIconsColor}>
-                                                            lock_outline
-                                                        </Icon>
-                                                    </InputAdornment>
-                                                ),
-                                                autoComplete: "off",
-                                                onChange: (e => setPassword(e.target.value))
-                                            }}
-                                        />
-                                        <a href="/register-page">
-                                            Not registered yet ? Click here !
-                                        </a>
-                                    </CardBody>
-                                    <CardFooter className={classes.cardFooter}>
-                                        <Button simple color="primary" size="lg" onClick={loginUser}>
-                                            Login
-                                        </Button>
-                                    </CardFooter>
-                                </form>
-                            </Card>
-                        </GridItem>
-                    </GridContainer>
-                </div>
-                <Footer whiteFont/>
-            </div>
+  /**
+   * @return {null}
+   */
+  function Greeting() {
+    if (props.location.state) {
+      return (
+        <SnackbarContent
+          message={<span>{props.location.state.message}</span>}
+          close
+          color="success"
+          icon={Check}
+        />
+      );
+    }
+    return null;
+  }
+
+  return (
+    <div>
+      <Header
+        absolute
+        color="transparent"
+        brand="Pick a Paw"
+        rightLinks={<HeaderLinks />}
+        {...rest}
+      />
+      <div
+        className={classes.pageHeader}
+        style={{
+          backgroundImage: "url(" + image + ")",
+          backgroundSize: "cover",
+          backgroundPosition: "left",
+        }}
+      >
+        <div className={classes.container}>
+          <GridContainer justify="center">
+            <GridItem xs={12} sm={12} md={4}>
+              <Card className={classes[cardAnimaton]}>
+                <form className={classes.form}>
+                  <CardHeader color="primary" className={classes.cardHeader}>
+                    <h4>Login</h4>
+                    <Greeting />
+                    {errMsg.errMsg !== "" && (
+                      <span style={{ color: "red", backgroundColor: "white" }}>
+                        {errMsg.errMsg} !
+                      </span>
+                    )}
+                  </CardHeader>
+                  <CardBody>
+                    <CustomInput
+                      labelText="Email..."
+                      id="email"
+                      formControlProps={{
+                        fullWidth: true,
+                      }}
+                      inputProps={{
+                        type: "email",
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <Email className={classes.inputIconsColor} />
+                          </InputAdornment>
+                        ),
+                        onChange: (e) => setEmail(e.target.value),
+                      }}
+                    />
+                    <CustomInput
+                      labelText="Password"
+                      id="pass"
+                      formControlProps={{
+                        fullWidth: true,
+                      }}
+                      inputProps={{
+                        type: "password",
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <Icon className={classes.inputIconsColor}>
+                              lock_outline
+                            </Icon>
+                          </InputAdornment>
+                        ),
+                        autoComplete: "off",
+                        onChange: (e) => setPassword(e.target.value),
+                      }}
+                    />
+                    <a href="/register-page">
+                      Not registered yet ? Click here !
+                    </a>
+                  </CardBody>
+                  <CardFooter className={classes.cardFooter}>
+                    <Button
+                      simple
+                      color="primary"
+                      size="lg"
+                      onClick={loginUser}
+                    >
+                      Login
+                    </Button>
+                  </CardFooter>
+                </form>
+              </Card>
+            </GridItem>
+          </GridContainer>
         </div>
-    );
+        <Footer whiteFont />
+      </div>
+    </div>
+  );
 }

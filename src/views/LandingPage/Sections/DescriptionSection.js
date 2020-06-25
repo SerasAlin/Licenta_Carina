@@ -21,14 +21,13 @@ export default function DescriptionSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
-          <h2 className={classes.title}>Let{"'"}s talk about our pet shelter</h2>
+          <h2 className={classes.title}>Let{"'"}s talk about our mission</h2>
           <h5 className={classes.description}>
-            Our mission is sharing human kindness all around the world by
-            saving all the helpless pets we can. We do that by taking
-            homeless pets into our shelter or to our foster families, making
-            sure they are or are becoming healthy, training them and finally
-            finding them permanent homes with loving families where they can
-            get their happily ever after.
+            Our mission is sharing human kindness all around the world by saving
+            all the helpless pets we can. We do that by posting homeless pets
+            into our web application, making sure they are or are becoming
+            healthy, training them and finally finding them permanent homes with
+            loving families where they can get their happily ever after.
           </h5>
         </GridItem>
       </GridContainer>
@@ -37,7 +36,7 @@ export default function DescriptionSection() {
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
               title="We offer everything they need."
-              description="We don't have the most expensive shelter, but our animals have
+              description="We don't have the most complex application, but the animals have
                 everything they need! Beside that, the most important thing is
                 the fact that they have our eternal love and someone to take
                 care of them."

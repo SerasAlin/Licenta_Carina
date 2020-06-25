@@ -4,9 +4,14 @@ import Footer from "components/Footer/Footer.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
-import { Button } from "@material-ui/core";
+import Button from "react-bootstrap/Button";
 import GridContainer from "components/Grid/GridContainer";
 import GridItem from "components/Grid/GridItem";
+import "views/VolunteerPage/VolunteerPage.css";
+import VolunteerTable from "../../components/VolunteerTable/VolunteerTable";
+import LostTable from "../../components/LostTable/LostTable";
+import AddPostForm from "../../components/AddPostForm/AddPostForm";
+
 const dashboardRoutes = [];
 
 export default function VolunteerPage(props) {
@@ -39,7 +44,7 @@ export default function VolunteerPage(props) {
     >
       <Header
         routes={dashboardRoutes}
-        brand="Maynard Pet Shelter"
+        brand="Pick a Paw"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
@@ -53,19 +58,14 @@ export default function VolunteerPage(props) {
           <h1 className="display-4">Volunteer!</h1>
           <br></br>
           <p className="lead">
-            If you want to volunteer and help all these animals, you have come
-            to the right place. Sign up today to help with the shelter, giving a
-            foster home or train pets!
+            If you want to volunteer, you have come to the right place. Sign up
+            today to help with food, services or any donation you would like!
           </p>
         </GridItem>
         <GridItem xs={12} sm={8}>
           <br></br>
           <CardDeck className="card-deck mb-5 text-center">
-            <Card
-              border="secondary"
-              className="card mb-4 shadow-sm"
-              style={{ width: "18rem" }}
-            >
+            <Card className="card mb-4 shadow-sm" style={{ width: "18rem" }}>
               <Card.Header>
                 <h4 className="my-0 font-weight-normal">Volunteer</h4>
               </Card.Header>
@@ -73,17 +73,24 @@ export default function VolunteerPage(props) {
                 {/* <Card.Image>
               </Card.Image> */}
                 <Card.Text>
-                  If you are interested in helping in the shelter with
-                  everything, from cleaning to playing with the animals, this is
-                  the spot for you!
+                  If you are interested in offering help to anyone who needs it,
+                  you can post an ad describing what help you could give.
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
                 <Button
                   type="button"
-                  class="btn btn-lg btn-block btn-secondary"
+                  className="volBtn btn btn-sm btn-secondary float-left"
+                  onClick={handleOnClick}
                 >
                   Post an ad
+                </Button>
+                <Button
+                  type="button"
+                  className="volBtn btn btn-sm btn-secondary float-right"
+                  onClick={handleOnClick}
+                >
+                  See volunteers{" "}
                 </Button>
               </Card.Footer>
             </Card>
@@ -93,28 +100,24 @@ export default function VolunteerPage(props) {
               </Card.Header>
               <Card.Body>
                 <Card.Text>
-                  You had many pets and all were disciplined so you figured out
-                  you're good at training and you decided it's time to help some
-                  other pets prepare for a family life!
+                  You lost a pet? Post an ad here and increase your chances to
+                  bring you loved one back home!
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
                 {/* <GridContainer>
                   <GridItem xs={6}> */}
                 <Button
-                  style={{ display: "inline-block" }}
-                  size="small"
                   type="button"
-                  class="btn btn-lg btn-block btn-secondary"
+                  className="volBtn btn btn-sm btn-secondary float-left"
                   onClick={handleOnClick}
                 >
                   See lost pets
                 </Button>
                 <Button
-                  style={{ display: "inline-block" }}
-                  size="small"
                   type="button"
-                  class="btn btn-lg btn-block btn-secondary"
+                  className="volBtn btn btn-sm btn-secondary float-right"
+                  onClick={handleOnClick}
                 >
                   Post a lost pet
                 </Button>
@@ -124,77 +127,18 @@ export default function VolunteerPage(props) {
             </Card>
           </CardDeck>
         </GridItem>
-
-        <GridItem xs={12} s={12} m={8}>
-          <h3 class="pb-3 mb-4 font-italic border-bottom">
-            Services or goods offered by our volunteers
-          </h3>
-          <div class="blog-post">
-            <h2 class="blog-post-title">How I fell in love with animals</h2>
-            <p class="blog-post-meta">January 1, 2014 by Mark</p>
-            <p>
-              This blog post will tell my story about how I used to be scared of
-              the tinniest animal, and now I love animals more that anything!
-            </p>
-            <hr />
-            <p>
-              You had several pets and all were so are disciplined so you
-              figured out you good at training and you decided it's time to help
-              some other pets bla bla bla bla bla
-            </p>
-          </div>
-        </GridItem>
-        <GridItem xs={12} s={12} m={4}>
-          <div ref={volunteer} class="p-3 mb-3 bg-light rounded">
-            <h4 class="font-italic">About</h4>
-            <p class="mb-0">
-              This section is dedicated to stories written by our wonderful
-              volunteers. They all have <em>amazing</em> memories that need to
-              be told!
-            </p>
-          </div>
-          <div class="p-3">
-            <h4 class="font-italic">Archives</h4>
-            <ol class="list-unstyled mb-0">
-              <li>
-                <a href="/home">March 20148</a>
-              </li>
-              <li>
-                <a href="/home">February 2018</a>
-              </li>
-              <li>
-                <a href="/home">January 2018</a>
-              </li>
-              <li>
-                <a href="/home">December 2017</a>
-              </li>
-              <li>
-                <a href="/home">June 2017</a>
-              </li>
-              <li>
-                <a href="/home">May 2017</a>
-              </li>
-              <li>
-                <a href="/home">April 2017</a>
-              </li>
-            </ol>
-          </div>
-          <div class="p-3">
-            <h4 class="font-italic">Elsewhere</h4>
-            <ol class="list-unstyled">
-              <li>
-                <a href="/home">GitHub</a>
-              </li>
-              <li>
-                <a href="/home">Twitter</a>
-              </li>
-              <li>
-                <a href="/home">Facebook</a>
-              </li>
-            </ol>
-          </div>
-        </GridItem>
       </GridContainer>
+      <div>
+        <AddPostForm />
+      </div>
+      <div className="sideBySide row">
+        <div className="col-md-6">
+          <VolunteerTable ref={volunteer} />
+        </div>
+        <div className="col-md-6">
+          <LostTable />
+        </div>
+      </div>
       <Footer />
     </div>
   );

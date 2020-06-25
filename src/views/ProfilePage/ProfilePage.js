@@ -71,7 +71,7 @@ export default function ProfilePage(props) {
     <div>
       <Header
         color="transparent"
-        brand="Maynard Pet Shelter"
+        brand="Pick a Paw"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
@@ -80,7 +80,7 @@ export default function ProfilePage(props) {
         }}
         {...rest}
       />
-        <Parallax small filter image={require("assets/img/profile-bg.jpg")} />
+      <Parallax small filter image={require("assets/img/profile-bg.jpg")} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
           <div className={classes.container}>
