@@ -68,7 +68,7 @@ export default function SimpleTable() {
 
         const requestOptions = {
             method: "POST",
-            headers:{},
+            headers: {},
             body: formData
         };
 
