@@ -29,8 +29,8 @@ export default function VolunteerTable(props) {
   );
 
   var imageStyle = {
-    width: "100px",
-    height: "100px",
+    width: "120px",
+    height: "80px",
   };
 
   useEffect(() => {
@@ -50,6 +50,11 @@ export default function VolunteerTable(props) {
         fetch("http://localhost:4000/post/all-posts")
           .then((response) => response.json())
           .then((data) => {
+            data.forEach(posts => {
+              if (posts.photo === "") {
+                posts.photo = "uploads/img/faces/dummyPetAvatar.png";
+              }
+            });
             setPosts((posts) => posts.concat(data));
             console.log(posts);
           });
@@ -75,22 +80,12 @@ export default function VolunteerTable(props) {
                   post.type === "volunteer" && (
                     <TableRow key={post._id}>
                       <TableCell align="center" component="th" scope="row">
-                        {post.photo && (
-                          <img
+                        <img
                             style={imageStyle}
-                            src={`../img/${post.photo}`}
+                            src={`http://localhost:4000/${post.photo}`}
                             alt="..."
                             className={imageClasses}
-                          />
-                        )}
-                        {!post.photo && (
-                          <img
-                            style={imageStyle}
-                            src={`../img/faces/dummyPetAvatar.png`}
-                            alt="..."
-                            className={imageClasses}
-                          />
-                        )}
+                        />
                       </TableCell>
                       <TableCell align="center">{post.content}</TableCell>
                       <TableCell align="center">{post.details}</TableCell>

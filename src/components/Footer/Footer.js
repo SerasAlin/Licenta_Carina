@@ -30,7 +30,7 @@ export default function Footer(props) {
     <footer className={footerClasses}>
       <div className={classes.container}>
         <div className={classes.center}>
-          &copy; {1900 + new Date().getYear()} , Maynard Pet shelter{" "}
+          &copy; {1900 + new Date().getYear()} , Pick a Paw{" "}
           by{" "}
           Carina Codorean
         </div>

@@ -23,11 +23,6 @@ const Post = require("../model/Post");
 
 router.post(
     "/add-post",
-    [
-        check("content", "Please Enter a content")
-            .not()
-            .isEmpty(),
-    ],
     upload.single('photo'),
     async (req, res) => {
         const errors = validationResult(req);
@@ -36,10 +31,12 @@ router.post(
                 errors: errors.array(),
             });
         }
-        const {user_id, type, content, photo, details} = req.body;
+        const {user_id, type, content, details} = req.body;
+        let photo = "";
         if (req.file) {
-            req.body.photo = req.file.path;
+            photo = req.file.path;
         }
+        let post;
         try {
             post = new Post({
                 user_id,

@@ -13,7 +13,7 @@ const adminBro = new AdminBro({
         component: AdminBro.bundle('../adminPanelComponents/Dashboard.jsx')
     },
     branding: {
-        logo: "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-1100x628.jpg",
+        logo: "https://s3.amazonaws.com/eventimages/events/52913/progressImage.jpg?v=35",
         companyName: "Carina Codorean"
     }
 })

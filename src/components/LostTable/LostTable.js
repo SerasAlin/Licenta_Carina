@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import classNames from "classnames";
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
+import TableCell from "../VolunteerTable/VolunteerTable";
 
 const useStyles = makeStyles({
   table: {
@@ -23,8 +24,8 @@ export default function LostTable(props) {
   );
 
   var imageStyle = {
-    width: "100px",
-    height: "100px",
+    width: "120px",
+    height: "80px",
   };
 
   useEffect(() => {
@@ -44,7 +45,11 @@ export default function LostTable(props) {
         fetch("http://localhost:4000/post/all-posts")
           .then((response) => response.json())
           .then((data) => {
-            console.log(posts);
+              data.forEach(posts => {
+                  if (posts.photo === "") {
+                      posts.photo = "uploads/img/faces/dummyPetAvatar.png";
+                  }
+              });
             setPosts((posts) => posts.concat(data));
             console.log(posts);
           });
@@ -61,7 +66,12 @@ export default function LostTable(props) {
               post.type === "lost" && (
                 <Card style={{ marginLeft: "30px" }} key={post._id}>
                   <Card.Body align="center">
-                    {post.photo}
+                      <img
+                          style={imageStyle}
+                          src={`http://localhost:4000/${post.photo}`}
+                          alt="..."
+                          className={imageClasses}
+                      />
                     <br></br>
                     {post.content}
                   </Card.Body>

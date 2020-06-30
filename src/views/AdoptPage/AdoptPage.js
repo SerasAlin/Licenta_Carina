@@ -96,12 +96,8 @@ export default function AdoptPage(props) {
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Adopt page title</h1>
-              <h4>Adopt page intro speech</h4>
-            </GridItem>
-            <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Adopt page title</h1>
-              <h4>Adopt page intro speech</h4>
+              <h1 className={classes.title}>Don't be shy</h1>
+              <h4>Give them a change to show you what love means</h4>
             </GridItem>
           </GridContainer>
         </div>
